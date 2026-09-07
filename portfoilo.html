@@ -11,10 +11,6 @@
 
 <style>
 
-/* =========================
-   RESET
-========================= */
-
 * {
     margin: 0;
     padding: 0;
@@ -25,26 +21,24 @@ body {
 
     font-family: Arial, "Tahoma", sans-serif;
 
-    height: 100vh;
-
-    overflow: hidden;
+    min-height: 100vh;
 
     color: white;
 
     background:
         radial-gradient(
-            circle at 10% 20%,
-            rgba(56,189,248,0.20),
+            circle at 15% 20%,
+            rgba(56,189,248,0.25),
             transparent 30%
         ),
-
         radial-gradient(
-            circle at 90% 80%,
-            rgba(139,92,246,0.20),
+            circle at 85% 80%,
+            rgba(139,92,246,0.25),
             transparent 30%
         ),
-
         #050816;
+
+    padding-bottom: 50px;
 }
 
 
@@ -56,7 +50,7 @@ body {
 
     height: 75px;
 
-    padding: 0 6%;
+    padding: 0 7%;
 
     display: flex;
 
@@ -74,48 +68,32 @@ body {
 
 .logo {
 
-    font-size: 22px;
+    font-size: 23px;
 
     font-weight: bold;
 }
 
 .logo span {
-
     color: #38bdf8;
 }
 
-.nav-right {
+.home {
 
-    display: flex;
-
-    align-items: center;
-
-    gap: 25px;
-}
-
-.nav-right span {
-
-    color: #94a3b8;
-
-    font-size: 14px;
-}
-
-.back {
-
-    color: white;
+    color: #cbd5e1;
 
     text-decoration: none;
 
     padding: 9px 18px;
 
-    border-radius: 20px;
+    border-radius: 30px;
 
-    border: 1px solid rgba(56,189,248,0.4);
+    border:
+        1px solid rgba(56,189,248,0.35);
 
     transition: 0.3s;
 }
 
-.back:hover {
+.home:hover {
 
     background: #38bdf8;
 
@@ -124,494 +102,256 @@ body {
 
 
 /* =========================
-   MAIN
+   HEADER
 ========================= */
 
-.main {
-
-    height: calc(100vh - 75px);
-
-    width: 90%;
-
-    max-width: 1250px;
-
-    margin: auto;
-
-    display: grid;
-
-    grid-template-columns: 0.9fr 1.5fr;
-
-    gap: 30px;
-
-    padding: 30px 0;
-}
-
-
-/* =========================
-   LEFT PROFILE
-========================= */
-
-.profile-card {
-
-    background:
-        linear-gradient(
-            145deg,
-            rgba(255,255,255,0.09),
-            rgba(255,255,255,0.03)
-        );
-
-    border:
-        1px solid rgba(255,255,255,0.10);
-
-    border-radius: 28px;
-
-    display: flex;
-
-    flex-direction: column;
-
-    justify-content: center;
-
-    align-items: center;
+.header {
 
     text-align: center;
 
-    padding: 30px;
-
-    position: relative;
-
-    overflow: hidden;
+    padding: 70px 20px 45px;
 }
 
-.profile-card::before {
+.header small {
 
-    content: "";
+    color: #38bdf8;
 
-    position: absolute;
+    letter-spacing: 4px;
 
-    width: 250px;
+    font-size: 13px;
+}
 
-    height: 250px;
+.header h1 {
 
-    border-radius: 50%;
+    font-size: 50px;
 
-    background: #2563eb;
+    margin: 12px 0;
 
-    filter: blur(100px);
+    background:
+        linear-gradient(
+            90deg,
+            #ffffff,
+            #38bdf8,
+            #a78bfa
+        );
 
-    opacity: 0.2;
+    -webkit-background-clip: text;
 
-    top: -100px;
+    -webkit-text-fill-color: transparent;
+}
 
-    left: -100px;
+.header p {
+
+    color: #94a3b8;
+
+    font-size: 17px;
 }
 
 
 /* =========================
-   PROFILE IMAGE
+   PROFILE
 ========================= */
 
-.profile-image {
+.profile {
 
-    width: 190px;
+    width: 90%;
 
-    height: 190px;
+    max-width: 1000px;
 
-    padding: 5px;
+    margin: auto;
 
-    border-radius: 50%;
+    padding: 30px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 30px;
+
+    border-radius: 25px;
 
     background:
-        linear-gradient(
-            135deg,
-            #38bdf8,
-            #6366f1,
-            #c084fc
-        );
+        rgba(255,255,255,0.06);
 
-    margin-bottom: 22px;
-
-    position: relative;
+    border:
+        1px solid rgba(255,255,255,0.1);
 }
 
-.profile-image img {
+.profile img {
 
-    width: 100%;
+    width: 100px;
 
-    height: 100%;
+    height: 100px;
 
     object-fit: cover;
 
     border-radius: 50%;
 
-    border: 6px solid #080c20;
+    padding: 4px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #38bdf8,
+            #8b5cf6
+        );
 }
 
-
-/* =========================
-   NAME
-========================= */
-
-.profile-card h1 {
-
-    font-size: 32px;
+.profile h2 {
 
     margin-bottom: 5px;
 }
 
-.nickname {
-
-    color: #38bdf8;
-
-    font-size: 16px;
-
-    margin-bottom: 15px;
-}
-
-.description {
+.profile p {
 
     color: #94a3b8;
 
     line-height: 1.7;
-
-    font-size: 14px;
-
-    max-width: 350px;
 }
 
 
 /* =========================
-   SOCIAL / INFO
+   MENU GRID
 ========================= */
 
-.info {
+.menu {
 
-    margin-top: 22px;
+    width: 90%;
 
-    display: flex;
+    max-width: 1000px;
 
-    gap: 10px;
-
-    flex-wrap: wrap;
-
-    justify-content: center;
-}
-
-.info span {
-
-    padding: 7px 12px;
-
-    border-radius: 20px;
-
-    background: rgba(56,189,248,0.08);
-
-    border:
-        1px solid rgba(56,189,248,0.2);
-
-    color: #bae6fd;
-
-    font-size: 12px;
-}
-
-
-/* =========================
-   RIGHT AREA
-========================= */
-
-.right {
+    margin: 40px auto;
 
     display: grid;
 
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns:
+        repeat(2, 1fr);
 
-    grid-template-rows: 1fr 1fr;
-
-    gap: 20px;
-
-    min-height: 0;
+    gap: 22px;
 }
 
 
 /* =========================
-   BOX
+   CARD
 ========================= */
 
-.box {
+.card {
 
-    padding: 25px;
+    position: relative;
 
-    border-radius: 24px;
+    min-height: 190px;
+
+    padding: 30px;
+
+    border-radius: 25px;
+
+    text-decoration: none;
+
+    color: white;
 
     background:
         linear-gradient(
             145deg,
-            rgba(255,255,255,0.07),
+            rgba(255,255,255,0.08),
             rgba(255,255,255,0.025)
         );
 
     border:
         1px solid rgba(255,255,255,0.09);
 
-    transition: 0.3s;
-
     overflow: hidden;
+
+    transition:
+        transform 0.35s,
+        border-color 0.35s,
+        box-shadow 0.35s;
 }
 
-.box:hover {
+.card:hover {
 
-    transform: translateY(-4px);
+    transform: translateY(-8px);
 
     border-color:
-        rgba(56,189,248,0.35);
+        rgba(56,189,248,0.5);
+
+    box-shadow:
+        0 15px 40px rgba(0,0,0,0.35);
 }
 
-.box-title {
+.card::after {
 
-    display: flex;
+    content: "→";
 
-    justify-content: space-between;
+    position: absolute;
 
-    align-items: center;
+    right: 25px;
+
+    bottom: 20px;
+
+    font-size: 25px;
+
+    color: #38bdf8;
+
+    transition: 0.3s;
+}
+
+.card:hover::after {
+
+    right: 18px;
+}
+
+.icon {
+
+    font-size: 42px;
 
     margin-bottom: 18px;
 }
 
-.box-title h2 {
+.card h2 {
 
-    font-size: 20px;
+    font-size: 22px;
+
+    margin-bottom: 8px;
 }
 
-.box-title span {
-
-    color: #38bdf8;
-
-    font-size: 12px;
-
-    letter-spacing: 2px;
-}
-
-.box p {
+.card p {
 
     color: #94a3b8;
 
     font-size: 14px;
 
-    line-height: 1.8;
+    line-height: 1.7;
+
+    max-width: 400px;
 }
 
 
 /* =========================
-   FUTURE
+   CARD COLORS
 ========================= */
 
-.future-list {
+.card.future:hover {
 
-    display: flex;
-
-    flex-direction: column;
-
-    gap: 12px;
+    border-color:
+        rgba(34,211,238,0.5);
 }
 
-.future-item {
+.card.skills:hover {
 
-    display: flex;
-
-    align-items: center;
-
-    gap: 12px;
-
-    padding: 12px;
-
-    background: rgba(0,0,0,0.15);
-
-    border-radius: 12px;
+    border-color:
+        rgba(129,140,248,0.5);
 }
 
-.future-icon {
+.card.projects:hover {
 
-    font-size: 23px;
+    border-color:
+        rgba(168,85,247,0.5);
 }
 
-.future-item h3 {
+.card.awards:hover {
 
-    font-size: 14px;
-
-    margin-bottom: 2px;
-}
-
-.future-item p {
-
-    font-size: 11px;
-}
-
-
-/* =========================
-   SKILLS
-========================= */
-
-.skill {
-
-    margin-bottom: 13px;
-}
-
-.skill:last-child {
-
-    margin-bottom: 0;
-}
-
-.skill-top {
-
-    display: flex;
-
-    justify-content: space-between;
-
-    font-size: 12px;
-
-    margin-bottom: 5px;
-
-    color: #cbd5e1;
-}
-
-.skill-top span:last-child {
-
-    color: #38bdf8;
-}
-
-.bar {
-
-    width: 100%;
-
-    height: 6px;
-
-    background: #111827;
-
-    border-radius: 20px;
-}
-
-.fill {
-
-    height: 100%;
-
-    border-radius: 20px;
-
-    background:
-        linear-gradient(
-            90deg,
-            #38bdf8,
-            #818cf8
-        );
-}
-
-.html {
-    width: 80%;
-}
-
-.python {
-    width: 65%;
-}
-
-.design {
-    width: 70%;
-}
-
-.problem {
-    width: 85%;
-}
-
-
-/* =========================
-   PROJECT
-========================= */
-
-.project-content {
-
-    display: flex;
-
-    gap: 15px;
-
-    align-items: center;
-}
-
-.project-icon {
-
-    width: 60px;
-
-    height: 60px;
-
-    flex-shrink: 0;
-
-    display: flex;
-
-    justify-content: center;
-
-    align-items: center;
-
-    border-radius: 15px;
-
-    background:
-        linear-gradient(
-            135deg,
-            #2563eb,
-            #7c3aed
-        );
-
-    font-size: 27px;
-}
-
-.project-text h3 {
-
-    font-size: 15px;
-
-    margin-bottom: 5px;
-}
-
-.project-text p {
-
-    font-size: 11px;
-
-    line-height: 1.6;
-}
-
-
-/* =========================
-   CERTIFICATE
-========================= */
-
-.certificate-box {
-
-    grid-column: span 2;
-
-    display: flex;
-
-    align-items: center;
-
-    gap: 20px;
-}
-
-.certificate-img {
-
-    height: 110px;
-
-    width: 160px;
-
-    object-fit: cover;
-
-    border-radius: 10px;
-
-    border:
-        1px solid rgba(255,255,255,0.15);
-}
-
-.certificate-text h3 {
-
-    font-size: 16px;
-
-    margin-bottom: 5px;
-}
-
-.certificate-text p {
-
-    font-size: 12px;
+    border-color:
+        rgba(250,204,21,0.5);
 }
 
 
@@ -619,57 +359,44 @@ body {
    FOOTER
 ========================= */
 
-.footer {
-
-    position: fixed;
-
-    bottom: 10px;
-
-    left: 0;
-
-    width: 100%;
+footer {
 
     text-align: center;
 
     color: #475569;
 
-    font-size: 11px;
+    font-size: 13px;
+
+    margin-top: 30px;
 }
 
 
 /* =========================
-   RESPONSIVE
+   MOBILE
 ========================= */
 
-@media (max-width: 850px) {
-
-    body {
-        overflow: auto;
-    }
-
-    .main {
-
-        height: auto;
-
-        grid-template-columns: 1fr;
-
-        padding-bottom: 50px;
-    }
-
-    .right {
-
-        grid-template-columns: 1fr;
-
-        grid-template-rows: auto;
-    }
-
-    .certificate-box {
-
-        grid-column: span 1;
-    }
+@media (max-width: 700px) {
 
     .menu {
-        display: none;
+
+        grid-template-columns: 1fr;
+    }
+
+    .profile {
+
+        flex-direction: column;
+
+        text-align: center;
+    }
+
+    .header h1 {
+
+        font-size: 38px;
+    }
+
+    .navbar {
+
+        padding: 0 5%;
     }
 
 }
@@ -682,9 +409,7 @@ body {
 <body>
 
 
-<!-- =========================
-     NAVBAR
-========================= -->
+<!-- NAVBAR -->
 
 <nav class="navbar">
 
@@ -692,359 +417,199 @@ body {
         VORRAPAT<span>.</span>
     </div>
 
-    <div class="nav-right">
-
-        <span>
-            MY PORTFOLIO
-        </span>
-
-        <a href="index.html" class="back">
-            ← หน้าแรก
-        </a>
-
-    </div>
+    <a href="index.html" class="home">
+        ← หน้าแรก
+    </a>
 
 </nav>
 
 
 
-<!-- =========================
-     MAIN
-========================= -->
+<!-- HEADER -->
 
-<div class="main">
+<div class="header">
 
+    <small>MY PORTFOLIO</small>
 
-    <!-- =====================
-         PROFILE
-    ====================== -->
+    <h1>
+        Portfolio
+    </h1>
 
-    <div class="profile-card">
+    <p>
+        ยินดีต้อนรับสู่แฟ้มสะสมงานของผม
+    </p>
 
-        <div class="profile-image">
-
-            <img
-                src="images/IMG_20260612_155640.jpg"
-                alt="รูปโปรไฟล์ วรภัทร"
-            >
-
-        </div>
+</div>
 
 
-        <h1>
+
+<!-- PROFILE -->
+
+<div class="profile">
+
+    <img
+        src="images/IMG_20260612_155640.jpg"
+        alt="รูปโปรไฟล์"
+    >
+
+    <div>
+
+        <h2>
             วรภัทร หลักคำ
-        </h1>
+        </h2>
 
-
-        <div class="nickname">
-            Vorrapat Lakkham
-        </div>
-
-
-        <p class="description">
-
+        <p>
             นักเรียนที่สนใจด้านเทคโนโลยี
-            การเขียนโปรแกรม และการสร้างสรรค์ผลงาน
-
+            การเขียนโปรแกรม และการพัฒนาเว็บไซต์
             <br>
-
-            พร้อมเรียนรู้สิ่งใหม่ ๆ
-            และพัฒนาตัวเองเพื่อก้าวไปสู่อนาคต
-
+            หน้านี้รวบรวมข้อมูลต่าง ๆ
+            ที่สามารถกดเข้าไปดูรายละเอียดแยกเป็นแต่ละหน้าได้
         </p>
 
-
-        <div class="info">
-
-            <span>💻 Programming</span>
-
-            <span>🌐 Web Development</span>
-
-            <span>🚀 Technology</span>
-
-        </div>
-
-    </div>
-
-
-
-    <!-- =====================
-         RIGHT
-    ====================== -->
-
-    <div class="right">
-
-
-        <!-- FUTURE -->
-
-        <div class="box">
-
-            <div class="box-title">
-
-                <h2>🎯 อนาคตของฉัน</h2>
-
-                <span>01</span>
-
-            </div>
-
-
-            <div class="future-list">
-
-
-                <div class="future-item">
-
-                    <div class="future-icon">
-                        🎓
-                    </div>
-
-                    <div>
-
-                        <h3>
-                            การศึกษาต่อ
-                        </h3>
-
-                        <p>
-                            Computer Science & Engineering
-                        </p>
-
-                    </div>
-
-                </div>
-
-
-                <div class="future-item">
-
-                    <div class="future-icon">
-                        💻
-                    </div>
-
-                    <div>
-
-                        <h3>
-                            อาชีพ
-                        </h3>
-
-                        <p>
-                            สนใจงานด้านเทคโนโลยีและซอฟต์แวร์
-                        </p>
-
-                    </div>
-
-                </div>
-
-
-                <div class="future-item">
-
-                    <div class="future-icon">
-                        🚀
-                    </div>
-
-                    <div>
-
-                        <h3>
-                            เป้าหมาย
-                        </h3>
-
-                        <p>
-                            สร้างผลงานและพัฒนาตัวเอง
-                        </p>
-
-                    </div>
-
-                </div>
-
-
-            </div>
-
-        </div>
-
-
-
-        <!-- SKILLS -->
-
-        <div class="box">
-
-            <div class="box-title">
-
-                <h2>⚡ Skills</h2>
-
-                <span>02</span>
-
-            </div>
-
-
-            <div class="skill">
-
-                <div class="skill-top">
-
-                    <span>HTML / CSS</span>
-
-                    <span>80%</span>
-
-                </div>
-
-                <div class="bar">
-
-                    <div class="fill html"></div>
-
-                </div>
-
-            </div>
-
-
-            <div class="skill">
-
-                <div class="skill-top">
-
-                    <span>Python</span>
-
-                    <span>65%</span>
-
-                </div>
-
-                <div class="bar">
-
-                    <div class="fill python"></div>
-
-                </div>
-
-            </div>
-
-
-            <div class="skill">
-
-                <div class="skill-top">
-
-                    <span>Design</span>
-
-                    <span>70%</span>
-
-                </div>
-
-                <div class="bar">
-
-                    <div class="fill design"></div>
-
-                </div>
-
-            </div>
-
-
-            <div class="skill">
-
-                <div class="skill-top">
-
-                    <span>Problem Solving</span>
-
-                    <span>85%</span>
-
-                </div>
-
-                <div class="bar">
-
-                    <div class="fill problem"></div>
-
-                </div>
-
-            </div>
-
-        </div>
-
-
-
-        <!-- PROJECT -->
-
-        <div class="box">
-
-            <div class="box-title">
-
-                <h2>💻 ผลงาน</h2>
-
-                <span>03</span>
-
-            </div>
-
-
-            <div class="project-content">
-
-                <div class="project-icon">
-                    💻
-                </div>
-
-                <div class="project-text">
-
-                    <h3>
-                        โครงงาน / ชิ้นงาน
-                    </h3>
-
-                    <p>
-                        ผลงานจากการเรียนรู้
-                        ด้านการเขียนโปรแกรม
-                        และเทคโนโลยี
-                    </p>
-
-                </div>
-
-            </div>
-
-            <br>
-
-            <p>
-                ได้ฝึกการคิดวิเคราะห์
-                การแก้ปัญหา และการสร้างผลงาน
-                เพื่อนำความรู้ไปต่อยอด
-            </p>
-
-        </div>
-
-
-
-        <!-- CERTIFICATE -->
-
-        <div class="box certificate-box">
-
-            <img
-                class="certificate-img"
-                src="images/684967_279_703113_1753086611.png"
-                alt="เกียรติบัตร"
-            >
-
-
-            <div class="certificate-text">
-
-                <div class="box-title">
-
-                    <h2>🏆 เกียรติบัตร</h2>
-
-                    <span>04</span>
-
-                </div>
-
-                <h3>
-                    เกียรติบัตรวิชาการ
-                </h3>
-
-                <p>
-                    กิจกรรมและผลงานที่เข้าร่วม
-                    เพื่อพัฒนาความรู้และประสบการณ์
-                </p>
-
-            </div>
-
-        </div>
-
-
     </div>
 
 </div>
 
 
 
-<div class="footer">
+<!-- MENU -->
 
-    © 2026 Vorrapat Lakkham • My Future Portfolio
+<div class="menu">
+
+
+    <!-- ABOUT -->
+
+    <a href="about.html" class="card">
+
+        <div class="icon">
+            👤
+        </div>
+
+        <h2>
+            เกี่ยวกับฉัน
+        </h2>
+
+        <p>
+            แนะนำตัว ประวัติการศึกษา
+            ความสนใจ และข้อมูลส่วนตัว
+        </p>
+
+    </a>
+
+
+
+    <!-- FUTURE -->
+
+    <a href="future.html" class="card future">
+
+        <div class="icon">
+            🚀
+        </div>
+
+        <h2>
+            อนาคตของฉัน
+        </h2>
+
+        <p>
+            เป้าหมายในอนาคต
+            คณะที่สนใจ และอาชีพที่อยากทำ
+        </p>
+
+    </a>
+
+
+
+    <!-- SKILLS -->
+
+    <a href="skills.html" class="card skills">
+
+        <div class="icon">
+            ⚡
+        </div>
+
+        <h2>
+            ทักษะของฉัน
+        </h2>
+
+        <p>
+            ความสามารถด้านการเขียนโปรแกรม
+            การออกแบบ และทักษะต่าง ๆ
+        </p>
+
+    </a>
+
+
+
+    <!-- PROJECT -->
+
+    <a href="projects.html" class="card projects">
+
+        <div class="icon">
+            💻
+        </div>
+
+        <h2>
+            ผลงานของฉัน
+        </h2>
+
+        <p>
+            รวมโครงงาน ชิ้นงาน
+            และผลงานที่เคยทำ
+        </p>
+
+    </a>
+
+
+
+    <!-- AWARDS -->
+
+    <a href="certificates.html" class="card awards">
+
+        <div class="icon">
+            🏆
+        </div>
+
+        <h2>
+            เกียรติบัตร
+        </h2>
+
+        <p>
+            เกียรติบัตร กิจกรรม
+            และความสำเร็จที่ภาคภูมิใจ
+        </p>
+
+    </a>
+
+
+
+    <!-- CONTACT -->
+
+    <a href="contact.html" class="card">
+
+        <div class="icon">
+            📞
+        </div>
+
+        <h2>
+            ติดต่อ
+        </h2>
+
+        <p>
+            ช่องทางการติดต่อและข้อมูลเพิ่มเติม
+        </p>
+
+    </a>
+
 
 </div>
+
+
+
+<footer>
+
+    © 2026 Vorrapat Lakkham • My Portfolio
+
+</footer>
 
 
 </body>
