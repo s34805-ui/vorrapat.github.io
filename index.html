@@ -4,20 +4,13 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <title>My Future | วรภัทร หลักคำ</title>
-
 <style>
-
-/* =========================
-   ตั้งค่าพื้นฐาน
-========================= */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-
 body {
     font-family: Arial, "Tahoma", sans-serif;
     min-height: 100vh;
@@ -34,11 +27,6 @@ body {
     padding: 40px 20px;
     overflow: hidden;
 }
-
-
-/* =========================
-   วงกลมตกแต่งพื้นหลัง
-========================= */
 body::before {
     content: "";
     position: fixed;
@@ -49,7 +37,6 @@ body::before {
     top: -120px;
     right: -100px;
 }
-
 body::after {
     content: "";
     position: fixed;
@@ -60,62 +47,33 @@ body::after {
     bottom: -100px;
     left: -80px;
 }
-
-
-/* =========================
-   กล่องหลัก
-========================= */
 .card {
     width: 100%;
     max-width: 850px;
-
     padding: 55px 45px;
-
     text-align: center;
-
     background: rgba(255,255,255,0.08);
     border: 1px solid rgba(255,255,255,0.18);
-
     border-radius: 30px;
-
     backdrop-filter: blur(18px);
     -webkit-backdrop-filter: blur(18px);
-
     box-shadow:
         0 25px 60px rgba(0,0,0,0.35);
-
     position: relative;
     z-index: 2;
-
     animation: fadeIn 1s ease;
 }
-
-
-/* =========================
-   ป้ายด้านบน
-========================= */
 .badge {
     display: inline-block;
-
     padding: 8px 18px;
-
     border-radius: 50px;
-
     background: rgba(52,152,219,0.15);
     border: 1px solid rgba(52,152,219,0.4);
-
     color: #74c9ff;
-
     font-size: 14px;
     letter-spacing: 1px;
-
     margin-bottom: 25px;
 }
-
-
-/* =========================
-   หัวข้อ
-========================= */
 h1 {
     font-size: 55px;
     margin-bottom: 10px;
@@ -126,100 +84,61 @@ h1 {
         #74c9ff,
         #c78cff
     );
-
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
-
 .subtitle {
     font-size: 22px;
     color: #b9d7ee;
-
     margin-bottom: 30px;
 }
-
-
-/* =========================
-   ข้อความแนะนำตัว
-========================= */
 .intro {
     max-width: 650px;
     margin: auto;
-
     font-size: 18px;
     line-height: 1.8;
-
     color: #dceaf5;
 }
-
-
-/* =========================
-   ส่วน Future
-========================= */
 .future-box {
     margin: 35px auto 30px;
-
     padding: 25px;
-
     max-width: 650px;
-
     border-radius: 20px;
-
     background: rgba(0,0,0,0.18);
     border: 1px solid rgba(255,255,255,0.1);
-
     transition: 0.3s;
 }
-
 .future-box:hover {
     transform: translateY(-5px);
-
     background: rgba(255,255,255,0.1);
-
     box-shadow:
         0 10px 30px rgba(52,152,219,0.15);
 }
-
 .future-box h2 {
     margin-bottom: 10px;
     font-size: 25px;
     color: #74c9ff;
 }
-
 .future-box p {
     color: #d7e6f2;
     line-height: 1.7;
 }
-
-
-/* =========================
-   ปุ่ม
-========================= */
 .button {
     display: inline-block;
-
     margin-top: 15px;
-
     padding: 14px 28px;
-
     border-radius: 50px;
-
     text-decoration: none;
-
     color: white;
-
     font-size: 17px;
     font-weight: bold;
-
     background: linear-gradient(
         135deg,
         #3498db,
         #8e44ad
     );
-
     box-shadow:
         0 8px 25px rgba(52,152,219,0.3);
-
     transition: 0.3s;
 }
 
@@ -242,10 +161,6 @@ h1 {
     font-size: 14px;
 }
 
-
-/* =========================
-   Animation
-========================= */
 @keyframes fadeIn {
 
     from {
@@ -257,9 +172,7 @@ h1 {
         transform: translateY(0);
     }
 }
-/* =========================
-   มือถือ
-========================= */
+
 @media (max-width: 600px) {
 
     .card {
