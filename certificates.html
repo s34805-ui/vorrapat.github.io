@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="th">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>เกียรติบัตร | วรภัทร หลักคำ</title>
+
+<style>
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, "Tahoma", sans-serif;
+    min-height: 100vh;
+    color: white;
+
+    background:
+        radial-gradient(
+            circle at 15% 20%,
+            rgba(168,85,247,0.25),
+            transparent 30%
+        ),
+        radial-gradient(
+            circle at 85% 80%,
+            rgba(56,189,248,0.2),
+            transparent 30%
+        ),
+        #050816;
+}
+
+
+/* NAVBAR */
+
+.navbar {
+    height: 75px;
+    padding: 0 7%;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    background: rgba(5,8,22,0.75);
+    backdrop-filter: blur(15px);
+
+    border-bottom:
+        1px solid rgba(255,255,255,0.08);
+}
+
+.logo {
+    font-size: 23px;
+    font-weight: bold;
+}
+
+.logo span {
+    color: #a855f7;
+}
+
+.back {
+    color: #cbd5e1;
+    text-decoration: none;
+
+    padding: 9px 18px;
+
+    border-radius: 30px;
+
+    border:
+        1px solid rgba(168,85,247,0.4);
+
+    transition: 0.3s;
+}
+
+.back:hover {
+    background: #a855f7;
+    color: white;
+}
+
+
+/* CONTAINER */
+
+.container {
+    width: 90%;
+    max-width: 1000px;
+    margin: 70px auto;
+}
+
+
+/* HEADER */
+
+.header {
+    text-align: center;
+    margin-bottom: 45px;
+}
+
+.header small {
+    color: #c084fc;
+    letter-spacing: 4px;
+    font-size: 13px;
+}
+
+.header h1 {
+    font-size: 48px;
+    margin: 12px 0;
+
+    background:
+        linear-gradient(
+            90deg,
+            #ffffff,
+            #c084fc,
+            #38bdf8
+        );
+
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.header p {
+    color: #94a3b8;
+    font-size: 17px;
+}
+
+
+/* CERTIFICATE */
+
+.certificate {
+
+    max-width: 750px;
+    margin: auto;
+
+    padding: 25px;
+
+    border-radius: 25px;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(255,255,255,0.08),
+            rgba(255,255,255,0.025)
+        );
+
+    border:
+        1px solid rgba(255,255,255,0.1);
+
+    text-align: center;
+
+    transition: 0.3s;
+}
+
+.certificate:hover {
+
+    transform: translateY(-7px);
+
+    border-color:
+        rgba(168,85,247,0.6);
+
+    box-shadow:
+        0 15px 40px rgba(0,0,0,0.4);
+}
+
+
+/* IMAGE */
+
+.certificate img {
+
+    width: 100%;
+    max-width: 650px;
+
+    border-radius: 15px;
+
+    display: block;
+    margin: auto;
+
+    border:
+        1px solid rgba(255,255,255,0.15);
+}
+
+
+/* TEXT */
+
+.certificate h2 {
+
+    margin-top: 22px;
+
+    color: #c084fc;
+
+    font-size: 24px;
+}
+
+.certificate p {
+
+    margin-top: 10px;
+
+    color: #cbd5e1;
+
+    line-height: 1.7;
+}
+
+
+/* FOOTER */
+
+footer {
+
+    text-align: center;
+
+    color: #475569;
+
+    font-size: 13px;
+
+    margin: 40px 0;
+}
+
+
+/* MOBILE */
+
+@media (max-width: 700px) {
+
+    .header h1 {
+        font-size: 38px;
+    }
+
+    .certificate {
+        padding: 15px;
+    }
+
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<nav class="navbar">
+
+    <div class="logo">
+        VORRAPAT<span>.</span>
+    </div>
+
+    <a href="portfoilo.html" class="back">
+        ← กลับ Portfolio
+    </a>
+
+</nav>
+
+
+
+<div class="container">
+
+
+    <div class="header">
+
+        <small>MY CERTIFICATES</small>
+
+        <h1>
+            เกียรติบัตร 🏆
+        </h1>
+
+        <p>
+            เกียรติบัตรและความสำเร็จที่ได้รับ
+        </p>
+
+    </div>
+
+
+
+    <div class="certificate">
+
+        <img
+            src="images/684967_279_703113_1753086611.png"
+            alt="เกียรติบัตร"
+        >
+
+        <h2>
+            เกียรติบัตรของฉัน
+        </h2>
+
+        <p>
+            เกียรติบัตรจากกิจกรรมและการเรียนรู้ต่าง ๆ
+            ที่ได้เข้าร่วมและเก็บไว้เป็นผลงานใน Portfolio
+        </p>
+
+    </div>
+
+
+</div>
+
+
+
+<footer>
+
+    © 2026 Vorrapat Lakkham • My Portfolio
+
+</footer>
+
+
+</body>
+
+</html>
