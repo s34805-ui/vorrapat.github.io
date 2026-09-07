@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="th">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>ทักษะของฉัน | วรภัทร หลักคำ</title>
+
+<style>
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, "Tahoma", sans-serif;
+    min-height: 100vh;
+    color: white;
+
+    background:
+        radial-gradient(
+            circle at 15% 20%,
+            rgba(129,140,248,0.25),
+            transparent 30%
+        ),
+        radial-gradient(
+            circle at 85% 80%,
+            rgba(139,92,246,0.25),
+            transparent 30%
+        ),
+        #050816;
+}
+
+.navbar {
+    height: 75px;
+    padding: 0 7%;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    background: rgba(5,8,22,0.75);
+    backdrop-filter: blur(15px);
+
+    border-bottom:
+        1px solid rgba(255,255,255,0.08);
+}
+
+.logo {
+    font-size: 23px;
+    font-weight: bold;
+}
+
+.logo span {
+    color: #818cf8;
+}
+
+.back {
+    color: #cbd5e1;
+    text-decoration: none;
+
+    padding: 9px 18px;
+
+    border-radius: 30px;
+
+    border:
+        1px solid rgba(129,140,248,0.4);
+
+    transition: 0.3s;
+}
+
+.back:hover {
+    background: #818cf8;
+    color: #050816;
+}
+
+.container {
+    width: 90%;
+    max-width: 950px;
+
+    margin: 70px auto;
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 45px;
+}
+
+.header small {
+    color: #818cf8;
+    letter-spacing: 4px;
+    font-size: 13px;
+}
+
+.header h1 {
+    font-size: 48px;
+    margin: 12px 0;
+
+    background:
+        linear-gradient(
+            90deg,
+            #ffffff,
+            #818cf8,
+            #c084fc
+        );
+
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.header p {
+    color: #94a3b8;
+    font-size: 17px;
+}
+
+.skills {
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, 1fr);
+
+    gap: 22px;
+}
+
+.card {
+    padding: 30px;
+
+    border-radius: 25px;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(255,255,255,0.08),
+            rgba(255,255,255,0.025)
+        );
+
+    border:
+        1px solid rgba(255,255,255,0.1);
+
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-7px);
+
+    border-color:
+        rgba(129,140,248,0.6);
+
+    box-shadow:
+        0 15px 40px rgba(0,0,0,0.35);
+}
+
+.icon {
+    font-size: 40px;
+    margin-bottom: 15px;
+}
+
+.card h2 {
+    margin-bottom: 12px;
+    color: #a5b4fc;
+}
+
+.card p {
+    color: #cbd5e1;
+    line-height: 1.8;
+}
+
+footer {
+    text-align: center;
+
+    color: #475569;
+
+    font-size: 13px;
+
+    margin: 40px 0;
+}
+
+@media (max-width: 700px) {
+
+    .skills {
+        grid-template-columns: 1fr;
+    }
+
+    .header h1 {
+        font-size: 38px;
+    }
+}
+
+</style>
+
+</head>
+
+<body>
+
+<nav class="navbar">
+
+    <div class="logo">
+        VORRAPAT<span>.</span>
+    </div>
+
+    <a href="portfoilo.html" class="back">
+        ← กลับ Portfolio
+    </a>
+
+</nav>
+
+
+<div class="container">
+
+    <div class="header">
+
+        <small>MY SKILLS</small>
+
+        <h1>
+            ทักษะของฉัน ⚡
+        </h1>
+
+        <p>
+            ความสามารถและทักษะที่ผมกำลังพัฒนา
+        </p>
+
+    </div>
+
+
+    <div class="skills">
+
+        <div class="card">
+
+            <div class="icon">
+                💻
+            </div>
+
+            <h2>
+                การเขียนโปรแกรม
+            </h2>
+
+            <p>
+                มีความสนใจและฝึกฝนการเขียนโปรแกรม
+                เพื่อสร้างโปรแกรมและระบบต่าง ๆ
+                รวมถึงเรียนรู้การทำงานของภาษาโปรแกรม
+            </p>
+
+        </div>
+
+
+        <div class="card">
+
+            <div class="icon">
+                🌐
+            </div>
+
+            <h2>
+                การพัฒนาเว็บไซต์
+            </h2>
+
+            <p>
+                สามารถเรียนรู้และพัฒนาเว็บไซต์ด้วย
+                HTML และ CSS
+                รวมถึงการออกแบบหน้าเว็บไซต์
+                ให้ใช้งานง่ายและสวยงาม
+            </p>
+
+        </div>
+
+
+        <div class="card">
+
+            <div class="icon">
+                🎨
+            </div>
+
+            <h2>
+                การออกแบบ
+            </h2>
+
+            <p>
+                สนใจการออกแบบหน้าตาเว็บไซต์
+                การจัดวางองค์ประกอบ
+                สี ตัวอักษร และรูปแบบต่าง ๆ
+                ให้เหมาะสมกับผู้ใช้งาน
+            </p>
+
+        </div>
+
+
+        <div class="card">
+
+            <div class="icon">
+                🧠
+            </div>
+
+            <h2>
+                การแก้ปัญหา
+            </h2>
+
+            <p>
+                สามารถวิเคราะห์ปัญหา
+                ทดลองหาวิธีแก้ไข
+                และเรียนรู้จากข้อผิดพลาด
+                เพื่อนำไปพัฒนาผลงานให้ดีขึ้น
+            </p>
+
+        </div>
+
+
+    </div>
+
+</div>
+
+
+<footer>
+
+    © 2026 Vorrapat Lakkham • My Portfolio
+
+</footer>
+
+</body>
+
+</html>
