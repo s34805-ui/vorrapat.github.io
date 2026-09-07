@@ -1,16 +1,13 @@
-```html
 <!DOCTYPE html>
 <html lang="th">
 
 <head>
-
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>Portfolio | วรภัทร หลักคำ</title>
 
 <style>
-
 * {
     margin: 0;
     padding: 0;
@@ -18,58 +15,33 @@
 }
 
 body {
-
     font-family: Arial, "Tahoma", sans-serif;
-
     min-height: 100vh;
-
     color: white;
 
     background:
-        radial-gradient(
-            circle at 15% 20%,
-            rgba(56,189,248,0.25),
-            transparent 30%
-        ),
-        radial-gradient(
-            circle at 85% 80%,
-            rgba(139,92,246,0.25),
-            transparent 30%
-        ),
+        radial-gradient(circle at 15% 20%, rgba(56,189,248,0.25), transparent 30%),
+        radial-gradient(circle at 85% 80%, rgba(139,92,246,0.25), transparent 30%),
         #050816;
 
     padding-bottom: 50px;
 }
 
-
-/* =========================
-   NAVBAR
-========================= */
-
 .navbar {
-
     height: 75px;
-
     padding: 0 7%;
-
     display: flex;
-
     justify-content: space-between;
-
     align-items: center;
 
     background: rgba(5,8,22,0.75);
-
     backdrop-filter: blur(15px);
 
-    border-bottom:
-        1px solid rgba(255,255,255,0.08);
+    border-bottom: 1px solid rgba(255,255,255,0.08);
 }
 
 .logo {
-
     font-size: 23px;
-
     font-weight: bold;
 }
 
@@ -78,338 +50,183 @@ body {
 }
 
 .home {
-
     color: #cbd5e1;
-
     text-decoration: none;
-
     padding: 9px 18px;
-
     border-radius: 30px;
-
-    border:
-        1px solid rgba(56,189,248,0.35);
-
+    border: 1px solid rgba(56,189,248,0.35);
     transition: 0.3s;
 }
 
 .home:hover {
-
     background: #38bdf8;
-
     color: #050816;
 }
 
-
-/* =========================
-   HEADER
-========================= */
-
 .header {
-
     text-align: center;
-
     padding: 70px 20px 45px;
 }
 
 .header small {
-
     color: #38bdf8;
-
     letter-spacing: 4px;
-
     font-size: 13px;
 }
 
 .header h1 {
-
     font-size: 50px;
-
     margin: 12px 0;
 
-    background:
-        linear-gradient(
-            90deg,
-            #ffffff,
-            #38bdf8,
-            #a78bfa
-        );
+    background: linear-gradient(
+        90deg,
+        #ffffff,
+        #38bdf8,
+        #a78bfa
+    );
 
     -webkit-background-clip: text;
-
     -webkit-text-fill-color: transparent;
 }
 
 .header p {
-
     color: #94a3b8;
-
     font-size: 17px;
 }
 
-
-/* =========================
-   PROFILE
-========================= */
-
 .profile {
-
     width: 90%;
-
     max-width: 1000px;
-
     margin: auto;
-
     padding: 30px;
 
     display: flex;
-
     align-items: center;
-
     gap: 30px;
 
     border-radius: 25px;
 
-    background:
-        rgba(255,255,255,0.06);
-
-    border:
-        1px solid rgba(255,255,255,0.1);
+    background: rgba(255,255,255,0.06);
+    border: 1px solid rgba(255,255,255,0.1);
 }
 
 .profile img {
-
-    width: 100px;
-
-    height: 100px;
+    width: 110px;
+    height: 110px;
 
     object-fit: cover;
-
     border-radius: 50%;
-
     padding: 4px;
 
-    background:
-        linear-gradient(
-            135deg,
-            #38bdf8,
-            #8b5cf6
-        );
+    background: linear-gradient(
+        135deg,
+        #38bdf8,
+        #8b5cf6
+    );
 }
 
 .profile h2 {
-
-    margin-bottom: 5px;
+    margin-bottom: 8px;
 }
 
 .profile p {
-
     color: #94a3b8;
-
     line-height: 1.7;
 }
 
-
-/* =========================
-   MENU GRID
-========================= */
-
 .menu {
-
     width: 90%;
-
     max-width: 1000px;
-
     margin: 40px auto;
 
     display: grid;
-
-    grid-template-columns:
-        repeat(2, 1fr);
-
+    grid-template-columns: repeat(2, 1fr);
     gap: 22px;
 }
 
-
-/* =========================
-   CARD
-========================= */
-
 .card {
-
     position: relative;
-
-    min-height: 190px;
-
+    min-height: 180px;
     padding: 30px;
 
     border-radius: 25px;
 
     text-decoration: none;
-
     color: white;
 
-    background:
-        linear-gradient(
-            145deg,
-            rgba(255,255,255,0.08),
-            rgba(255,255,255,0.025)
-        );
+    background: linear-gradient(
+        145deg,
+        rgba(255,255,255,0.08),
+        rgba(255,255,255,0.025)
+    );
 
-    border:
-        1px solid rgba(255,255,255,0.09);
+    border: 1px solid rgba(255,255,255,0.09);
 
-    overflow: hidden;
-
-    transition:
-        transform 0.35s,
-        border-color 0.35s,
-        box-shadow 0.35s;
+    transition: 0.35s;
 }
 
 .card:hover {
-
     transform: translateY(-8px);
-
-    border-color:
-        rgba(56,189,248,0.5);
+    border-color: #38bdf8;
 
     box-shadow:
-        0 15px 40px rgba(0,0,0,0.35);
-}
-
-.card::after {
-
-    content: "→";
-
-    position: absolute;
-
-    right: 25px;
-
-    bottom: 20px;
-
-    font-size: 25px;
-
-    color: #38bdf8;
-
-    transition: 0.3s;
-}
-
-.card:hover::after {
-
-    right: 18px;
+        0 15px 40px rgba(0,0,0,0.4);
 }
 
 .icon {
-
-    font-size: 42px;
-
-    margin-bottom: 18px;
+    font-size: 40px;
+    margin-bottom: 15px;
 }
 
 .card h2 {
-
     font-size: 22px;
-
     margin-bottom: 8px;
 }
 
 .card p {
-
     color: #94a3b8;
-
     font-size: 14px;
-
     line-height: 1.7;
-
-    max-width: 400px;
 }
 
+.card::after {
+    content: "→";
 
-/* =========================
-   CARD COLORS
-========================= */
+    position: absolute;
+    right: 25px;
+    bottom: 20px;
 
-.card.future:hover {
-
-    border-color:
-        rgba(34,211,238,0.5);
+    font-size: 25px;
+    color: #38bdf8;
 }
-
-.card.skills:hover {
-
-    border-color:
-        rgba(129,140,248,0.5);
-}
-
-.card.projects:hover {
-
-    border-color:
-        rgba(168,85,247,0.5);
-}
-
-.card.awards:hover {
-
-    border-color:
-        rgba(250,204,21,0.5);
-}
-
-
-/* =========================
-   FOOTER
-========================= */
 
 footer {
-
     text-align: center;
-
     color: #475569;
-
     font-size: 13px;
-
     margin-top: 30px;
 }
-
-
-/* =========================
-   MOBILE
-========================= */
 
 @media (max-width: 700px) {
 
     .menu {
-
         grid-template-columns: 1fr;
     }
 
     .profile {
-
         flex-direction: column;
-
         text-align: center;
     }
 
     .header h1 {
-
         font-size: 38px;
     }
-
-    .navbar {
-
-        padding: 0 5%;
-    }
-
 }
-
 </style>
 
 </head>
 
-
 <body>
-
-
-<!-- NAVBAR -->
 
 <nav class="navbar">
 
@@ -423,196 +240,78 @@ footer {
 
 </nav>
 
-
-
-<!-- HEADER -->
-
 <div class="header">
 
     <small>MY PORTFOLIO</small>
 
-    <h1>
-        Portfolio
-    </h1>
+    <h1>Portfolio</h1>
 
-    <p>
-        ยินดีต้อนรับสู่แฟ้มสะสมงานของผม
-    </p>
+    <p>เลือกหัวข้อที่ต้องการดู</p>
 
 </div>
 
-
-
-<!-- PROFILE -->
-
 <div class="profile">
 
-    <img
-        src="images/IMG_20260612_155640.jpg"
-        alt="รูปโปรไฟล์"
-    >
+    <img src="images/IMG_20260612_155640.jpg" alt="รูปโปรไฟล์">
 
     <div>
 
-        <h2>
-            วรภัทร หลักคำ
-        </h2>
+        <h2>วรภัทร หลักคำ</h2>
 
         <p>
             นักเรียนที่สนใจด้านเทคโนโลยี
             การเขียนโปรแกรม และการพัฒนาเว็บไซต์
             <br>
-            หน้านี้รวบรวมข้อมูลต่าง ๆ
-            ที่สามารถกดเข้าไปดูรายละเอียดแยกเป็นแต่ละหน้าได้
+            เลือกหัวข้อด้านล่างเพื่อดูข้อมูลแต่ละส่วน
         </p>
 
     </div>
 
 </div>
 
-
-
-<!-- MENU -->
-
 <div class="menu">
 
-
-    <!-- ABOUT -->
-
     <a href="about.html" class="card">
-
-        <div class="icon">
-            👤
-        </div>
-
-        <h2>
-            เกี่ยวกับฉัน
-        </h2>
-
-        <p>
-            แนะนำตัว ประวัติการศึกษา
-            ความสนใจ และข้อมูลส่วนตัว
-        </p>
-
+        <div class="icon">👤</div>
+        <h2>เกี่ยวกับฉัน</h2>
+        <p>ข้อมูลส่วนตัว ประวัติการศึกษา และความสนใจ</p>
     </a>
 
-
-
-    <!-- FUTURE -->
-
-    <a href="future.html" class="card future">
-
-        <div class="icon">
-            🚀
-        </div>
-
-        <h2>
-            อนาคตของฉัน
-        </h2>
-
-        <p>
-            เป้าหมายในอนาคต
-            คณะที่สนใจ และอาชีพที่อยากทำ
-        </p>
-
+    <a href="future.html" class="card">
+        <div class="icon">🚀</div>
+        <h2>อนาคตของฉัน</h2>
+        <p>เป้าหมาย คณะที่สนใจ และอาชีพในอนาคต</p>
     </a>
 
-
-
-    <!-- SKILLS -->
-
-    <a href="skills.html" class="card skills">
-
-        <div class="icon">
-            ⚡
-        </div>
-
-        <h2>
-            ทักษะของฉัน
-        </h2>
-
-        <p>
-            ความสามารถด้านการเขียนโปรแกรม
-            การออกแบบ และทักษะต่าง ๆ
-        </p>
-
+    <a href="skills.html" class="card">
+        <div class="icon">⚡</div>
+        <h2>ทักษะของฉัน</h2>
+        <p>ความสามารถด้านการเขียนโปรแกรมและเทคโนโลยี</p>
     </a>
 
-
-
-    <!-- PROJECT -->
-
-    <a href="projects.html" class="card projects">
-
-        <div class="icon">
-            💻
-        </div>
-
-        <h2>
-            ผลงานของฉัน
-        </h2>
-
-        <p>
-            รวมโครงงาน ชิ้นงาน
-            และผลงานที่เคยทำ
-        </p>
-
+    <a href="projects.html" class="card">
+        <div class="icon">💻</div>
+        <h2>ผลงานของฉัน</h2>
+        <p>โครงงาน ชิ้นงาน และผลงานที่เคยทำ</p>
     </a>
 
-
-
-    <!-- AWARDS -->
-
-    <a href="certificates.html" class="card awards">
-
-        <div class="icon">
-            🏆
-        </div>
-
-        <h2>
-            เกียรติบัตร
-        </h2>
-
-        <p>
-            เกียรติบัตร กิจกรรม
-            และความสำเร็จที่ภาคภูมิใจ
-        </p>
-
+    <a href="certificates.html" class="card">
+        <div class="icon">🏆</div>
+        <h2>เกียรติบัตร</h2>
+        <p>เกียรติบัตร กิจกรรม และความสำเร็จ</p>
     </a>
-
-
-
-    <!-- CONTACT -->
 
     <a href="contact.html" class="card">
-
-        <div class="icon">
-            📞
-        </div>
-
-        <h2>
-            ติดต่อ
-        </h2>
-
-        <p>
-            ช่องทางการติดต่อและข้อมูลเพิ่มเติม
-        </p>
-
+        <div class="icon">📞</div>
+        <h2>ติดต่อ</h2>
+        <p>ช่องทางการติดต่อและข้อมูลเพิ่มเติม</p>
     </a>
-
 
 </div>
 
-
-
 <footer>
-
     © 2026 Vorrapat Lakkham • My Portfolio
-
 </footer>
 
-
 </body>
-
 </html>
-```
