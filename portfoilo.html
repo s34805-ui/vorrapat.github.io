@@ -7,12 +7,12 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Portfolio | วรภัทร หลักคำ</title>
+<title>My Portfolio | Vorrapat</title>
 
 <style>
 
 /* =========================
-   พื้นฐาน
+   RESET
 ========================= */
 
 * {
@@ -26,45 +26,79 @@ html {
 }
 
 body {
-
     font-family: Arial, "Tahoma", sans-serif;
-
+    background: #050816;
     color: white;
-
-    background:
-        radial-gradient(circle at 10% 10%, rgba(52,152,219,0.25), transparent 30%),
-        radial-gradient(circle at 90% 60%, rgba(142,68,173,0.2), transparent 30%),
-        linear-gradient(135deg, #07111f, #102a43, #07111f);
-
-    min-height: 100vh;
-
-    line-height: 1.7;
+    overflow-x: hidden;
 }
 
 
 /* =========================
-   Navigation Bar
+   BACKGROUND
 ========================= */
 
-nav {
+body::before {
+    content: "";
+    position: fixed;
+    width: 500px;
+    height: 500px;
 
-    position: sticky;
+    background: #2563eb;
+
+    filter: blur(180px);
+    opacity: 0.18;
+
+    top: -200px;
+    left: -150px;
+
+    z-index: -2;
+}
+
+body::after {
+    content: "";
+    position: fixed;
+    width: 450px;
+    height: 450px;
+
+    background: #9333ea;
+
+    filter: blur(180px);
+    opacity: 0.16;
+
+    bottom: -200px;
+    right: -150px;
+
+    z-index: -2;
+}
+
+
+/* =========================
+   NAVBAR
+========================= */
+
+.navbar {
+
+    position: fixed;
+
     top: 0;
-    z-index: 100;
+    left: 0;
 
     width: 100%;
 
     padding: 18px 7%;
 
     display: flex;
+
     justify-content: space-between;
     align-items: center;
 
-    background: rgba(7,17,31,0.75);
+    background: rgba(5,8,22,0.7);
 
-    backdrop-filter: blur(15px);
+    backdrop-filter: blur(18px);
 
-    border-bottom: 1px solid rgba(255,255,255,0.1);
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+
+    z-index: 1000;
 }
 
 .logo {
@@ -72,83 +106,193 @@ nav {
     font-size: 22px;
     font-weight: bold;
 
-    background: linear-gradient(
-        90deg,
-        #74c9ff,
-        #c78cff
-    );
-
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    color: white;
 }
 
-nav a {
+.logo span {
+    color: #38bdf8;
+}
 
-    color: #dceaf5;
+.menu a {
+
+    color: #cbd5e1;
 
     text-decoration: none;
 
-    margin-left: 25px;
+    margin-left: 28px;
 
     font-size: 15px;
 
     transition: 0.3s;
 }
 
-nav a:hover {
-
-    color: #74c9ff;
+.menu a:hover {
+    color: #38bdf8;
 }
 
 
 /* =========================
-   Container
+   MAIN
 ========================= */
 
 .container {
 
     width: 90%;
-    max-width: 1100px;
+    max-width: 1150px;
 
     margin: auto;
 }
 
 
 /* =========================
-   Hero
+   HERO
 ========================= */
 
 .hero {
 
-    min-height: 80vh;
+    min-height: 100vh;
 
     display: flex;
 
-    justify-content: center;
     align-items: center;
 
-    gap: 70px;
+    justify-content: space-between;
 
-    padding: 80px 0;
+    gap: 60px;
+
+    padding-top: 100px;
+}
+
+.hero-text {
+
+    max-width: 650px;
+}
+
+.tag {
+
+    display: inline-block;
+
+    padding: 8px 16px;
+
+    border: 1px solid rgba(56,189,248,0.4);
+
+    border-radius: 50px;
+
+    color: #38bdf8;
+
+    background: rgba(56,189,248,0.08);
+
+    font-size: 13px;
+
+    letter-spacing: 2px;
+
+    margin-bottom: 25px;
+}
+
+.hero h1 {
+
+    font-size: 65px;
+
+    line-height: 1.1;
+
+    margin-bottom: 15px;
+}
+
+.hero h1 span {
+
+    background: linear-gradient(
+        90deg,
+        #38bdf8,
+        #818cf8,
+        #c084fc
+    );
+
+    -webkit-background-clip: text;
+
+    -webkit-text-fill-color: transparent;
+}
+
+.hero h2 {
+
+    font-size: 25px;
+
+    color: #94a3b8;
+
+    font-weight: normal;
+
+    margin-bottom: 25px;
+}
+
+.hero p {
+
+    color: #94a3b8;
+
+    font-size: 17px;
+
+    line-height: 1.9;
+
+    max-width: 600px;
+}
+
+
+/* =========================
+   HERO IMAGE
+========================= */
+
+.profile-area {
+
+    position: relative;
+
+    width: 330px;
+    height: 330px;
+
+    flex-shrink: 0;
+}
+
+.profile-glow {
+
+    position: absolute;
+
+    width: 100%;
+    height: 100%;
+
+    border-radius: 50%;
+
+    background:
+        linear-gradient(
+            135deg,
+            #38bdf8,
+            #6366f1,
+            #c084fc
+        );
+
+    filter: blur(25px);
+
+    opacity: 0.5;
+
+    animation: glow 3s infinite alternate;
 }
 
 .profile {
 
-    width: 230px;
-    height: 230px;
+    position: relative;
+
+    width: 300px;
+    height: 300px;
+
+    margin: 15px;
 
     border-radius: 50%;
 
-    padding: 6px;
+    padding: 7px;
 
-    background: linear-gradient(
-        135deg,
-        #3498db,
-        #8e44ad
-    );
-
-    box-shadow:
-        0 0 45px rgba(52,152,219,0.35);
+    background:
+        linear-gradient(
+            135deg,
+            #38bdf8,
+            #6366f1,
+            #c084fc
+        );
 }
 
 .profile img {
@@ -160,98 +304,49 @@ nav a:hover {
 
     border-radius: 50%;
 
-    border: 5px solid #0b1b2c;
-}
-
-.hero-text {
-
-    max-width: 600px;
-}
-
-.small-title {
-
-    color: #74c9ff;
-
-    font-size: 15px;
-
-    letter-spacing: 3px;
-
-    margin-bottom: 10px;
-}
-
-.hero h1 {
-
-    font-size: 52px;
-
-    line-height: 1.2;
-
-    margin-bottom: 10px;
-
-    background: linear-gradient(
-        90deg,
-        #ffffff,
-        #74c9ff,
-        #c78cff
-    );
-
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-}
-
-.hero h2 {
-
-    color: #c9dbea;
-
-    font-size: 23px;
-
-    font-weight: normal;
-
-    margin-bottom: 20px;
-}
-
-.hero p {
-
-    color: #b9cddd;
-
-    font-size: 17px;
+    border: 7px solid #080c20;
 }
 
 
 /* =========================
-   Section
+   SECTION
 ========================= */
 
 section {
-
-    padding: 80px 0;
+    padding: 110px 0;
 }
 
-.section-title {
+.section-header {
 
-    text-align: center;
-
-    margin-bottom: 45px;
+    margin-bottom: 50px;
 }
 
-.section-title span {
+.section-header small {
 
-    color: #74c9ff;
-
-    font-size: 14px;
+    color: #38bdf8;
 
     letter-spacing: 3px;
+
+    font-size: 13px;
 }
 
-.section-title h2 {
+.section-header h2 {
 
-    font-size: 35px;
+    font-size: 42px;
 
-    margin-top: 5px;
+    margin-top: 8px;
+}
+
+.section-header p {
+
+    color: #64748b;
+
+    margin-top: 8px;
 }
 
 
 /* =========================
-   Future Cards
+   FUTURE
 ========================= */
 
 .future-grid {
@@ -261,106 +356,151 @@ section {
     grid-template-columns:
         repeat(3, 1fr);
 
-    gap: 25px;
+    gap: 22px;
 }
 
 .future-card {
 
-    padding: 30px;
+    position: relative;
 
-    border-radius: 22px;
+    padding: 32px;
 
-    background: rgba(255,255,255,0.07);
+    min-height: 230px;
 
-    border: 1px solid rgba(255,255,255,0.12);
+    border-radius: 24px;
 
-    backdrop-filter: blur(10px);
+    background:
+        linear-gradient(
+            145deg,
+            rgba(255,255,255,0.07),
+            rgba(255,255,255,0.02)
+        );
 
-    transition: 0.35s;
+    border: 1px solid rgba(255,255,255,0.09);
+
+    transition: 0.4s;
+
+    overflow: hidden;
+}
+
+.future-card::before {
+
+    content: "";
+
+    position: absolute;
+
+    width: 100px;
+    height: 100px;
+
+    border-radius: 50%;
+
+    background: #38bdf8;
+
+    filter: blur(70px);
+
+    opacity: 0;
+
+    transition: 0.4s;
 }
 
 .future-card:hover {
 
-    transform: translateY(-8px);
+    transform: translateY(-10px);
 
-    border-color: rgba(116,201,255,0.5);
-
-    box-shadow:
-        0 15px 35px rgba(0,0,0,0.25);
+    border-color: rgba(56,189,248,0.4);
 }
 
-.icon {
+.future-card:hover::before {
+    opacity: 0.3;
+}
 
-    font-size: 35px;
+.number {
 
-    margin-bottom: 15px;
+    font-size: 13px;
+
+    color: #64748b;
+
+    margin-bottom: 20px;
+}
+
+.future-card .icon {
+
+    font-size: 38px;
+
+    margin-bottom: 18px;
 }
 
 .future-card h3 {
 
-    color: #74c9ff;
+    font-size: 22px;
 
     margin-bottom: 10px;
 }
 
 .future-card p {
 
-    color: #b9cddd;
+    color: #94a3b8;
+
+    line-height: 1.8;
 }
 
 
 /* =========================
-   Skills
+   SKILLS
 ========================= */
 
-.skills-box {
+.skills {
 
-    max-width: 800px;
+    display: grid;
 
-    margin: auto;
+    grid-template-columns:
+        repeat(2, 1fr);
 
-    padding: 35px;
-
-    border-radius: 25px;
-
-    background: rgba(255,255,255,0.06);
-
-    border: 1px solid rgba(255,255,255,0.12);
+    gap: 22px;
 }
 
-.skill {
+.skill-card {
 
-    margin-bottom: 22px;
+    padding: 25px;
+
+    background: rgba(255,255,255,0.04);
+
+    border: 1px solid rgba(255,255,255,0.08);
+
+    border-radius: 20px;
 }
 
-.skill:last-child {
-
-    margin-bottom: 0;
-}
-
-.skill-name {
+.skill-top {
 
     display: flex;
 
     justify-content: space-between;
 
-    margin-bottom: 8px;
-
-    color: #dceaf5;
+    margin-bottom: 12px;
 }
 
-.progress {
+.skill-top span:first-child {
+    color: #e2e8f0;
+}
 
-    height: 9px;
+.skill-top span:last-child {
+    color: #38bdf8;
+}
 
-    background: rgba(255,255,255,0.1);
+.bar {
+
+    width: 100%;
+
+    height: 8px;
+
+    background: #111827;
 
     border-radius: 20px;
 
     overflow: hidden;
 }
 
-.progress-bar {
+.fill {
 
     height: 100%;
 
@@ -369,13 +509,13 @@ section {
     background:
         linear-gradient(
             90deg,
-            #3498db,
-            #9b59b6
+            #38bdf8,
+            #818cf8
         );
 }
 
 .html {
-    width: 75%;
+    width: 80%;
 }
 
 .python {
@@ -383,133 +523,182 @@ section {
 }
 
 .design {
-    width: 60%;
+    width: 70%;
 }
 
 .problem {
-    width: 70%;
+    width: 85%;
 }
 
 
 /* =========================
-   ผลงาน
+   PROJECTS
 ========================= */
 
-.project-grid {
+.projects {
 
     display: grid;
 
     grid-template-columns:
         repeat(2, 1fr);
 
-    gap: 30px;
+    gap: 25px;
 }
 
-.project-card {
+.project {
 
-    background: rgba(255,255,255,0.07);
+    background: #0b1023;
 
-    border: 1px solid rgba(255,255,255,0.12);
-
-    border-radius: 22px;
+    border-radius: 25px;
 
     overflow: hidden;
 
-    transition: 0.35s;
+    border: 1px solid rgba(255,255,255,0.08);
+
+    transition: 0.4s;
 }
 
-.project-card:hover {
+.project:hover {
 
     transform: translateY(-8px);
 
-    box-shadow:
-        0 15px 40px rgba(0,0,0,0.3);
+    border-color: rgba(129,140,248,0.5);
 }
 
-.project-image {
+.project img {
 
     width: 100%;
 
-    height: 230px;
+    height: 280px;
 
     object-fit: cover;
 
-    background: #102a43;
+    display: block;
 }
 
 .project-content {
 
-    padding: 25px;
+    padding: 28px;
+}
+
+.project-content small {
+
+    color: #38bdf8;
+
+    letter-spacing: 2px;
 }
 
 .project-content h3 {
 
-    color: #74c9ff;
+    font-size: 24px;
 
-    margin-bottom: 10px;
+    margin: 8px 0 12px;
 }
 
 .project-content p {
 
-    color: #b9cddd;
+    color: #94a3b8;
+
+    line-height: 1.8;
 }
 
 
 /* =========================
-   Certificate
+   CERTIFICATE
 ========================= */
 
 .certificate {
 
-    max-width: 700px;
+    display: flex;
 
-    margin: auto;
+    align-items: center;
 
-    text-align: center;
+    gap: 45px;
 
-    padding: 30px;
+    padding: 35px;
 
     border-radius: 25px;
 
-    background: rgba(255,255,255,0.07);
+    background:
+        linear-gradient(
+            135deg,
+            rgba(255,255,255,0.07),
+            rgba(255,255,255,0.02)
+        );
 
-    border: 1px solid rgba(255,255,255,0.12);
+    border: 1px solid rgba(255,255,255,0.08);
 }
 
 .certificate img {
 
-    width: 100%;
+    width: 420px;
 
-    max-width: 500px;
+    border-radius: 15px;
 
-    border-radius: 12px;
-
-    margin-top: 20px;
-
-    box-shadow:
-        0 10px 30px rgba(0,0,0,0.3);
+    transition: 0.4s;
 }
 
-.certificate p {
+.certificate img:hover {
 
-    color: #b9cddd;
+    transform: scale(1.03);
 
-    margin-top: 10px;
+    box-shadow:
+        0 20px 50px rgba(0,0,0,0.5);
+}
+
+.certificate-text {
+
+    flex: 1;
+}
+
+.certificate-text small {
+
+    color: #38bdf8;
+
+    letter-spacing: 2px;
+}
+
+.certificate-text h3 {
+
+    font-size: 28px;
+
+    margin: 10px 0;
+}
+
+.certificate-text p {
+
+    color: #94a3b8;
+
+    line-height: 1.8;
 }
 
 
 /* =========================
-   Back Button
+   CONTACT / END
 ========================= */
 
-.back {
+.end {
 
     text-align: center;
 
-    padding: 40px 0 70px;
+    padding: 80px 20px;
 }
 
-.btn {
+.end h2 {
+
+    font-size: 40px;
+
+    margin-bottom: 15px;
+}
+
+.end p {
+
+    color: #94a3b8;
+
+    margin-bottom: 30px;
+}
+
+.button {
 
     display: inline-block;
 
@@ -517,91 +706,119 @@ section {
 
     border-radius: 50px;
 
-    color: white;
-
     text-decoration: none;
+
+    color: white;
 
     font-weight: bold;
 
     background:
         linear-gradient(
-            135deg,
-            #3498db,
-            #8e44ad
+            90deg,
+            #2563eb,
+            #7c3aed
         );
 
     box-shadow:
-        0 8px 25px rgba(52,152,219,0.3);
+        0 10px 30px rgba(37,99,235,0.25);
 
     transition: 0.3s;
 }
 
-.btn:hover {
+.button:hover {
 
     transform: translateY(-4px);
 
     box-shadow:
-        0 12px 35px rgba(52,152,219,0.5);
+        0 15px 40px rgba(124,58,237,0.4);
 }
 
 
 /* =========================
-   Footer
+   FOOTER
 ========================= */
 
 footer {
 
     text-align: center;
 
-    padding: 25px;
+    padding: 30px;
 
-    color: #71899d;
+    color: #475569;
 
     border-top:
-        1px solid rgba(255,255,255,0.08);
+        1px solid rgba(255,255,255,0.06);
 
-    font-size: 14px;
+    font-size: 13px;
 }
 
 
 /* =========================
-   Responsive
+   ANIMATION
 ========================= */
 
-@media (max-width: 800px) {
+@keyframes glow {
 
-    nav {
-        padding: 15px 5%;
+    from {
+        transform: scale(0.95);
     }
 
-    nav a {
+    to {
+        transform: scale(1.05);
+    }
+
+}
+
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 850px) {
+
+    .menu a {
         margin-left: 10px;
-        font-size: 13px;
+        font-size: 12px;
     }
 
     .hero {
 
-        flex-direction: column;
+        flex-direction: column-reverse;
 
         text-align: center;
 
-        gap: 35px;
+        padding-top: 140px;
+    }
 
-        padding: 60px 0;
+    .hero p {
+        margin: auto;
     }
 
     .hero h1 {
-        font-size: 40px;
+        font-size: 48px;
     }
 
-    .future-grid {
+    .profile-area {
+        transform: scale(0.8);
+    }
+
+    .future-grid,
+    .skills,
+    .projects {
 
         grid-template-columns: 1fr;
     }
 
-    .project-grid {
+    .certificate {
 
-        grid-template-columns: 1fr;
+        flex-direction: column;
+
+        text-align: center;
+    }
+
+    .certificate img {
+
+        width: 100%;
     }
 
 }
@@ -615,24 +832,26 @@ footer {
 
 
 <!-- =========================
-     Navigation
+     NAVBAR
 ========================= -->
 
-<nav>
+<nav class="navbar">
 
     <div class="logo">
-        VORRAPAT.
+        VORRAPAT<span>.</span>
     </div>
 
-    <div>
+    <div class="menu">
 
-        <a href="#about">เกี่ยวกับฉัน</a>
+        <a href="#about">About</a>
 
-        <a href="#future">อนาคต</a>
+        <a href="#future">Future</a>
 
-        <a href="#skills">ทักษะ</a>
+        <a href="#skills">Skills</a>
 
-        <a href="#projects">ผลงาน</a>
+        <a href="#projects">Projects</a>
+
+        <a href="#certificate">Awards</a>
 
     </div>
 
@@ -644,60 +863,84 @@ footer {
 
 
 <!-- =========================
-     Hero
+     HERO
 ========================= -->
 
 <section class="hero" id="about">
 
-    <div class="profile">
-
-        <img
-            src="images/IMG_20260612_155640.jpg"
-            alt="รูปโปรไฟล์ของวรภัทร"
-        >
-
-    </div>
-
 
     <div class="hero-text">
 
-        <div class="small-title">
-            WELCOME TO MY PORTFOLIO
+        <div class="tag">
+            MY PORTFOLIO
         </div>
 
         <h1>
-            วรภัทร หลักคำ
+            Hello, I'm
+            <span>Vorrapat.</span>
         </h1>
 
         <h2>
-            My Future • My Dream • My Journey
+            นักเรียนที่สนใจเทคโนโลยีและการเขียนโปรแกรม
         </h2>
 
         <p>
-            สวัสดีครับ ผมวรภัทร
-            เป็นคนที่สนใจด้านเทคโนโลยี
-            การเขียนโปรแกรม และการพัฒนาสิ่งใหม่ ๆ
-            เว็บไซต์นี้รวบรวมตัวตน ความสนใจ
-            ผลงาน และเป้าหมายของผมในอนาคต
+
+            สวัสดีครับ ผมชื่อ
+            <strong>วรภัทร หลักคำ</strong>
+
+            <br>
+
+            ผมมีความสนใจด้าน Computer Science & Engineering
+            ชอบเรียนรู้เทคโนโลยี การเขียนโปรแกรม
+            และการสร้างสรรค์ผลงานใหม่ ๆ
+
+            <br><br>
+
+            เว็บไซต์นี้จัดทำขึ้นเพื่อรวบรวมตัวตน
+            ผลงาน ความสามารถ และเป้าหมาย
+            ที่ผมอยากก้าวไปให้ถึงในอนาคต
+
         </p>
 
     </div>
+
+
+    <div class="profile-area">
+
+        <div class="profile-glow"></div>
+
+        <div class="profile">
+
+            <img
+                src="images/IMG_20260612_155640.jpg"
+                alt="รูปโปรไฟล์"
+            >
+
+        </div>
+
+    </div>
+
 
 </section>
 
 
 
 <!-- =========================
-     Future
+     FUTURE
 ========================= -->
 
 <section id="future">
 
-    <div class="section-title">
+    <div class="section-header">
 
-        <span>MY FUTURE</span>
+        <small>01 — MY FUTURE</small>
 
         <h2>อนาคตของฉัน</h2>
+
+        <p>
+            เป้าหมายและสิ่งที่ผมอยากทำในอนาคต
+        </p>
 
     </div>
 
@@ -707,15 +950,22 @@ footer {
 
         <div class="future-card">
 
-            <div class="icon">🎓</div>
+            <div class="number">
+                01
+            </div>
 
-            <h3>การศึกษา</h3>
+            <div class="icon">
+                🎓
+            </div>
+
+            <h3>
+                การศึกษาต่อ
+            </h3>
 
             <p>
-                ผมต้องการศึกษาต่อในด้าน
+                ตั้งใจศึกษาต่อในสาขาที่เกี่ยวข้องกับ
                 Computer Science & Engineering
-                เพื่อพัฒนาความรู้ด้านเทคโนโลยี
-                และการเขียนโปรแกรม
+                เพื่อเพิ่มพูนความรู้และทักษะด้านเทคโนโลยี
             </p>
 
         </div>
@@ -723,15 +973,22 @@ footer {
 
         <div class="future-card">
 
-            <div class="icon">💻</div>
+            <div class="number">
+                02
+            </div>
 
-            <h3>อาชีพในอนาคต</h3>
+            <div class="icon">
+                💻
+            </div>
+
+            <h3>
+                อาชีพในอนาคต
+            </h3>
 
             <p>
-                ผมสนใจอาชีพที่เกี่ยวข้องกับ
-                เทคโนโลยีและการพัฒนาซอฟต์แวร์
-                รวมถึงการสร้างระบบที่สามารถ
-                นำไปใช้แก้ปัญหาได้จริง
+                สนใจทำงานด้านเทคโนโลยี
+                การพัฒนาซอฟต์แวร์
+                และการสร้างระบบที่สามารถนำไปใช้จริง
             </p>
 
         </div>
@@ -739,15 +996,22 @@ footer {
 
         <div class="future-card">
 
-            <div class="icon">🚀</div>
+            <div class="number">
+                03
+            </div>
 
-            <h3>เป้าหมาย</h3>
+            <div class="icon">
+                🚀
+            </div>
+
+            <h3>
+                เป้าหมายของฉัน
+            </h3>
 
             <p>
-                พัฒนาทักษะของตัวเองอย่างต่อเนื่อง
+                พัฒนาตัวเองอยู่เสมอ
                 สร้างผลงานที่มีประโยชน์
-                และนำความรู้ด้านเทคโนโลยี
-                ไปต่อยอดในอนาคต
+                และนำความรู้ไปต่อยอดในอนาคต
             </p>
 
         </div>
@@ -760,45 +1024,49 @@ footer {
 
 
 <!-- =========================
-     Skills
+     SKILLS
 ========================= -->
 
 <section id="skills">
 
-    <div class="section-title">
+    <div class="section-header">
 
-        <span>MY SKILLS</span>
+        <small>02 — MY SKILLS</small>
 
-        <h2>ทักษะที่สนใจ</h2>
+        <h2>ทักษะของฉัน</h2>
+
+        <p>
+            สิ่งที่กำลังเรียนรู้และพัฒนาตัวเอง
+        </p>
 
     </div>
 
 
-    <div class="skills-box">
+    <div class="skills">
 
 
-        <div class="skill">
+        <div class="skill-card">
 
-            <div class="skill-name">
+            <div class="skill-top">
 
                 <span>HTML / CSS</span>
 
-                <span>75%</span>
+                <span>80%</span>
 
             </div>
 
-            <div class="progress">
+            <div class="bar">
 
-                <div class="progress-bar html"></div>
+                <div class="fill html"></div>
 
             </div>
 
         </div>
 
 
-        <div class="skill">
+        <div class="skill-card">
 
-            <div class="skill-name">
+            <div class="skill-top">
 
                 <span>Python</span>
 
@@ -806,47 +1074,47 @@ footer {
 
             </div>
 
-            <div class="progress">
+            <div class="bar">
 
-                <div class="progress-bar python"></div>
-
-            </div>
-
-        </div>
-
-
-        <div class="skill">
-
-            <div class="skill-name">
-
-                <span>การออกแบบ</span>
-
-                <span>60%</span>
-
-            </div>
-
-            <div class="progress">
-
-                <div class="progress-bar design"></div>
+                <div class="fill python"></div>
 
             </div>
 
         </div>
 
 
-        <div class="skill">
+        <div class="skill-card">
 
-            <div class="skill-name">
+            <div class="skill-top">
 
-                <span>การแก้ปัญหา</span>
+                <span>Graphic / Design</span>
 
                 <span>70%</span>
 
             </div>
 
-            <div class="progress">
+            <div class="bar">
 
-                <div class="progress-bar problem"></div>
+                <div class="fill design"></div>
+
+            </div>
+
+        </div>
+
+
+        <div class="skill-card">
+
+            <div class="skill-top">
+
+                <span>Problem Solving</span>
+
+                <span>85%</span>
+
+            </div>
+
+            <div class="bar">
+
+                <div class="fill problem"></div>
 
             </div>
 
@@ -860,42 +1128,47 @@ footer {
 
 
 <!-- =========================
-     Projects
+     PROJECTS
 ========================= -->
 
 <section id="projects">
 
-    <div class="section-title">
+    <div class="section-header">
 
-        <span>MY WORK</span>
+        <small>03 — MY PROJECTS</small>
 
         <h2>ผลงานของฉัน</h2>
+
+        <p>
+            ผลงานและประสบการณ์ที่ได้เรียนรู้
+        </p>
 
     </div>
 
 
-    <div class="project-grid">
+    <div class="projects">
 
 
-        <div class="project-card">
+        <div class="project">
 
             <img
-                class="project-image"
                 src="images/IMG_20260612_155640.jpg"
                 alt="ผลงานของฉัน"
             >
 
             <div class="project-content">
 
+                <small>PROJECT 01</small>
+
                 <h3>
-                    💻 โครงงาน / ชิ้นงาน
+                    โครงงาน / ชิ้นงาน
                 </h3>
 
                 <p>
                     พื้นที่สำหรับนำเสนอผลงาน
                     ที่ได้ทำระหว่างการเรียน
-                    พร้อมอธิบายสิ่งที่ได้เรียนรู้
-                    และประสบการณ์จากการทำงาน
+                    พร้อมอธิบายแนวคิด ขั้นตอนการทำงาน
+                    และสิ่งที่ได้รับจากการทำโครงงาน
                 </p>
 
             </div>
@@ -903,19 +1176,33 @@ footer {
         </div>
 
 
-        <div class="project-card">
+
+        <div class="project">
+
+            <div style="
+                height:280px;
+                display:flex;
+                align-items:center;
+                justify-content:center;
+                font-size:80px;
+                background:linear-gradient(135deg,#0f172a,#172554);
+            ">
+                🧠
+            </div>
 
             <div class="project-content">
 
+                <small>PROJECT 02</small>
+
                 <h3>
-                    🧠 สิ่งที่ได้เรียนรู้
+                    การเรียนรู้ด้านเทคโนโลยี
                 </h3>
 
                 <p>
-                    การทำผลงานช่วยให้ผมได้ฝึก
-                    การคิดวิเคราะห์ การแก้ปัญหา
-                    การเขียนโปรแกรม และการทำงาน
-                    อย่างเป็นขั้นตอน
+                    ฝึกการเขียนโปรแกรม
+                    การคิดวิเคราะห์
+                    การแก้ปัญหา และการสร้างเว็บไซต์
+                    เพื่อนำความรู้ไปพัฒนาผลงานใหม่ ๆ
                 </p>
 
             </div>
@@ -930,35 +1217,50 @@ footer {
 
 
 <!-- =========================
-     Certificate
+     CERTIFICATE
 ========================= -->
 
-<section>
+<section id="certificate">
 
-    <div class="section-title">
+    <div class="section-header">
 
-        <span>ACHIEVEMENT</span>
+        <small>04 — ACHIEVEMENT</small>
 
-        <h2>เกียรติบัตรและกิจกรรม</h2>
+        <h2>เกียรติบัตร</h2>
+
+        <p>
+            กิจกรรมและความสำเร็จที่ภาคภูมิใจ
+        </p>
 
     </div>
 
 
     <div class="certificate">
 
-        <h3>
-            🏆 เกียรติบัตรวิชาการ
-        </h3>
-
-        <p>
-            ตัวอย่างเกียรติบัตรหรือกิจกรรม
-            ที่เข้าร่วมและภาคภูมิใจ
-        </p>
 
         <img
             src="images/684967_279_703113_1753086611.png"
             alt="เกียรติบัตรวิชาการ"
         >
+
+
+        <div class="certificate-text">
+
+            <small>ACHIEVEMENT</small>
+
+            <h3>
+                🏆 เกียรติบัตรวิชาการ
+            </h3>
+
+            <p>
+                เกียรติบัตรและกิจกรรมต่าง ๆ
+                ที่ได้เข้าร่วมระหว่างการเรียน
+                ซึ่งเป็นประสบการณ์ที่ช่วยพัฒนา
+                ความรู้ ความสามารถ และทักษะของผม
+            </p>
+
+        </div>
+
 
     </div>
 
@@ -967,12 +1269,20 @@ footer {
 
 
 <!-- =========================
-     Back
+     END
 ========================= -->
 
-<div class="back">
+<div class="end">
 
-    <a href="index.html" class="btn">
+    <h2>
+        Thanks for visiting!
+    </h2>
+
+    <p>
+        ขอบคุณที่เข้ามาชม Portfolio ของผมครับ
+    </p>
+
+    <a href="index.html" class="button">
         ← กลับหน้าแรก
     </a>
 
@@ -982,9 +1292,15 @@ footer {
 </div>
 
 
+
+<!-- =========================
+     FOOTER
+========================= -->
+
 <footer>
 
-    © 2026 Vorrapat Lakkham • My Future Portfolio
+    © 2026 Vorrapat Lakkham
+    • My Future Portfolio
 
 </footer>
 
