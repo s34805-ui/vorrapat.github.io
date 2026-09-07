@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="th">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>ติดต่อ | วรภัทร หลักคำ</title>
+
+<style>
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, "Tahoma", sans-serif;
+    min-height: 100vh;
+    color: white;
+
+    background:
+        radial-gradient(
+            circle at 15% 20%,
+            rgba(168,85,247,0.25),
+            transparent 30%
+        ),
+        radial-gradient(
+            circle at 85% 80%,
+            rgba(56,189,248,0.2),
+            transparent 30%
+        ),
+        #050816;
+}
+
+
+/* NAVBAR */
+
+.navbar {
+    height: 75px;
+    padding: 0 7%;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    background: rgba(5,8,22,0.75);
+    backdrop-filter: blur(15px);
+
+    border-bottom:
+        1px solid rgba(255,255,255,0.08);
+}
+
+.logo {
+    font-size: 23px;
+    font-weight: bold;
+}
+
+.logo span {
+    color: #a855f7;
+}
+
+.back {
+    color: #cbd5e1;
+    text-decoration: none;
+
+    padding: 9px 18px;
+
+    border-radius: 30px;
+
+    border:
+        1px solid rgba(168,85,247,0.4);
+
+    transition: 0.3s;
+}
+
+.back:hover {
+    background: #a855f7;
+    color: white;
+}
+
+
+/* CONTAINER */
+
+.container {
+    width: 90%;
+    max-width: 850px;
+
+    margin: 70px auto;
+}
+
+
+/* HEADER */
+
+.header {
+    text-align: center;
+    margin-bottom: 45px;
+}
+
+.header small {
+    color: #c084fc;
+    letter-spacing: 4px;
+    font-size: 13px;
+}
+
+.header h1 {
+    font-size: 48px;
+    margin: 12px 0;
+
+    background:
+        linear-gradient(
+            90deg,
+            #ffffff,
+            #c084fc,
+            #38bdf8
+        );
+
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.header p {
+    color: #94a3b8;
+    font-size: 17px;
+}
+
+
+/* CONTACT */
+
+.contact-box {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, 1fr);
+
+    gap: 20px;
+}
+
+
+.card {
+
+    padding: 28px;
+
+    border-radius: 22px;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(255,255,255,0.08),
+            rgba(255,255,255,0.025)
+        );
+
+    border:
+        1px solid rgba(255,255,255,0.1);
+
+    transition: 0.3s;
+}
+
+.card:hover {
+
+    transform: translateY(-6px);
+
+    border-color:
+        rgba(168,85,247,0.6);
+
+    box-shadow:
+        0 15px 40px rgba(0,0,0,0.4);
+}
+
+.icon {
+    font-size: 38px;
+    margin-bottom: 15px;
+}
+
+.card h2 {
+    color: #c084fc;
+    font-size: 21px;
+    margin-bottom: 10px;
+}
+
+.card p {
+    color: #cbd5e1;
+    line-height: 1.7;
+}
+
+
+/* FOOTER */
+
+footer {
+    text-align: center;
+
+    color: #475569;
+
+    font-size: 13px;
+
+    margin: 50px 0;
+}
+
+
+/* MOBILE */
+
+@media (max-width: 700px) {
+
+    .contact-box {
+        grid-template-columns: 1fr;
+    }
+
+    .header h1 {
+        font-size: 38px;
+    }
+
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<nav class="navbar">
+
+    <div class="logo">
+        VORRAPAT<span>.</span>
+    </div>
+
+    <a href="portfoilo.html" class="back">
+        ← กลับ Portfolio
+    </a>
+
+</nav>
+
+
+
+<div class="container">
+
+
+    <div class="header">
+
+        <small>CONTACT ME</small>
+
+        <h1>
+            ติดต่อฉัน 📞
+        </h1>
+
+        <p>
+            ช่องทางสำหรับติดต่อและพูดคุย
+        </p>
+
+    </div>
+
+
+
+    <div class="contact-box">
+
+
+        <div class="card">
+
+            <div class="icon">
+                👤
+            </div>
+
+            <h2>
+                ชื่อ
+            </h2>
+
+            <p>
+                วรภัทร หลักคำ
+            </p>
+
+        </div>
+
+
+
+        <div class="card">
+
+            <div class="icon">
+                📧
+            </div>
+
+            <h2>
+                Email
+            </h2>
+
+            <p>
+                ใส่อีเมลของคุณที่นี่
+            </p>
+
+        </div>
+
+
+
+        <div class="card">
+
+            <div class="icon">
+                📱
+            </div>
+
+            <h2>
+                โทรศัพท์
+            </h2>
+
+            <p>
+                ใส่เบอร์โทรศัพท์ของคุณที่นี่
+            </p>
+
+        </div>
+
+
+
+        <div class="card">
+
+            <div class="icon">
+                📍
+            </div>
+
+            <h2>
+                ที่อยู่
+            </h2>
+
+            <p>
+                โรงเรียนบ้านบึง "อุตสาหกรรมนุเคราะห์"
+            </p>
+
+        </div>
+
+
+    </div>
+
+
+</div>
+
+
+
+<footer>
+
+    © 2026 Vorrapat Lakkham • My Portfolio
+
+</footer>
+
+
+</body>
+
+</html>
