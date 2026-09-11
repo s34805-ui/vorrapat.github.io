@@ -193,4 +193,254 @@ body {
     transition: 0.2s;
 }
 
-.card:hover
+.card:hover {
+    border-color: #93c5fd;
+
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 8px 20px rgba(15,23,42,0.06);
+}
+
+.icon {
+    font-size: 30px;
+
+    margin-bottom: 12px;
+}
+
+.card h2 {
+    font-size: 19px;
+
+    font-weight: 600;
+
+    margin-bottom: 7px;
+}
+
+.card p {
+    color: #64748b;
+
+    font-size: 14px;
+
+    line-height: 1.6;
+}
+
+
+/* FOOTER */
+
+footer {
+    text-align: center;
+
+    color: #94a3b8;
+
+    font-size: 12px;
+
+    margin-top: 35px;
+}
+
+
+/* MOBILE */
+
+@media (max-width: 700px) {
+
+    .menu {
+        grid-template-columns: 1fr;
+    }
+
+    .profile {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .header h1 {
+        font-size: 36px;
+    }
+
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<nav class="navbar">
+
+    <div class="logo">
+        VORRAPAT<span>.</span>
+    </div>
+
+    <a href="index.html" class="home">
+        ← หน้าแรก
+    </a>
+
+</nav>
+
+
+
+<div class="header">
+
+    <small>MY PORTFOLIO</small>
+
+    <h1>
+        Portfolio
+    </h1>
+
+    <p>
+        เลือกหัวข้อที่ต้องการดู
+    </p>
+
+</div>
+
+
+
+<div class="profile">
+
+    <img
+        src="images/IMG_20260612_155640.jpg"
+        alt="รูปโปรไฟล์"
+    >
+
+    <div>
+
+        <h2>
+            วรภัทร หลักคำ
+        </h2>
+
+        <p>
+            ระดับชั้น 6/6 เลขที่ 12
+            <br>
+            เลือกหัวข้อด้านล่างเพื่อดูข้อมูลแต่ละส่วน
+        </p>
+
+    </div>
+
+</div>
+
+
+
+<div class="menu">
+
+
+    <a href="about.html" class="card">
+
+        <div class="icon">
+            👤
+        </div>
+
+        <h2>
+            เกี่ยวกับฉัน
+        </h2>
+
+        <p>
+            ข้อมูลส่วนตัว ประวัติการศึกษา และความสนใจ
+        </p>
+
+    </a>
+
+
+
+    <a href="future.html" class="card">
+
+        <div class="icon">
+            🚀
+        </div>
+
+        <h2>
+            อนาคตของฉัน
+        </h2>
+
+        <p>
+            เป้าหมาย คณะที่สนใจ และอาชีพในอนาคต
+        </p>
+
+    </a>
+
+
+
+    <a href="skills.html" class="card">
+
+        <div class="icon">
+            ⚡
+        </div>
+
+        <h2>
+            ทักษะของฉัน
+        </h2>
+
+        <p>
+            ความสามารถด้านการเขียนโปรแกรมและเทคโนโลยี
+        </p>
+
+    </a>
+
+
+
+    <a href="projects.html" class="card">
+
+        <div class="icon">
+            💻
+        </div>
+
+        <h2>
+            ผลงานของฉัน
+        </h2>
+
+        <p>
+            โครงงาน ชิ้นงาน และผลงานที่เคยทำ
+        </p>
+
+    </a>
+
+
+
+    <a href="certificates.html" class="card">
+
+        <div class="icon">
+            🏆
+        </div>
+
+        <h2>
+            เกียรติบัตร
+        </h2>
+
+        <p>
+            เกียรติบัตร กิจกรรม และความสำเร็จ
+        </p>
+
+    </a>
+
+
+
+    <a href="contact.html" class="card">
+
+        <div class="icon">
+            📞
+        </div>
+
+        <h2>
+            ติดต่อ
+        </h2>
+
+        <p>
+            ช่องทางการติดต่อและข้อมูลเพิ่มเติม
+        </p>
+
+    </a>
+
+
+</div>
+
+
+
+<footer>
+
+    © 2026 Vorrapat Lakkham • My Portfolio
+
+</footer>
+
+
+</body>
+
+</html>
