@@ -17,219 +17,193 @@
 }
 
 body {
-
     font-family: Arial, "Tahoma", sans-serif;
-
     min-height: 100vh;
 
-    color: white;
-
-    background:
-        radial-gradient(
-            circle at 15% 20%,
-            rgba(34,211,238,0.25),
-            transparent 30%
-        ),
-        radial-gradient(
-            circle at 85% 80%,
-            rgba(139,92,246,0.25),
-            transparent 30%
-        ),
-        #050816;
+    background: #f8fafc;
+    color: #1e293b;
 }
 
 
-/* NAVBAR */
+/* ===== NAVBAR ===== */
 
 .navbar {
+    height: 70px;
 
-    height: 75px;
-
-    padding: 0 7%;
+    padding: 0 8%;
 
     display: flex;
-
     justify-content: space-between;
-
     align-items: center;
 
-    background: rgba(5,8,22,0.75);
+    background: #ffffff;
 
-    backdrop-filter: blur(15px);
-
-    border-bottom:
-        1px solid rgba(255,255,255,0.08);
+    border-bottom: 1px solid #e2e8f0;
 }
 
 .logo {
+    font-size: 21px;
+    font-weight: 600;
 
-    font-size: 23px;
-
-    font-weight: bold;
+    color: #1e293b;
 }
 
 .logo span {
-
-    color: #22d3ee;
+    color: #2563eb;
 }
 
 .back {
-
-    color: #cbd5e1;
+    color: #475569;
 
     text-decoration: none;
 
-    padding: 9px 18px;
+    padding: 8px 15px;
 
-    border-radius: 30px;
+    border: 1px solid #cbd5e1;
 
-    border:
-        1px solid rgba(34,211,238,0.4);
+    border-radius: 7px;
 
-    transition: 0.3s;
+    font-size: 14px;
+
+    transition: 0.2s;
 }
 
 .back:hover {
+    background: #2563eb;
 
-    background: #22d3ee;
+    color: white;
 
-    color: #050816;
+    border-color: #2563eb;
 }
 
 
-/* CONTENT */
+/* ===== CONTAINER ===== */
 
 .container {
+    width: 88%;
 
-    width: 90%;
+    max-width: 900px;
 
-    max-width: 950px;
+    margin: 0 auto;
 
-    margin: 70px auto;
+    padding: 60px 0 30px;
 }
 
-.header {
 
+/* ===== HEADER ===== */
+
+.header {
     text-align: center;
 
-    margin-bottom: 45px;
+    margin-bottom: 40px;
 }
 
 .header small {
+    color: #2563eb;
 
-    color: #22d3ee;
+    letter-spacing: 3px;
 
-    letter-spacing: 4px;
-
-    font-size: 13px;
+    font-size: 12px;
 }
 
 .header h1 {
+    font-size: 42px;
 
-    font-size: 48px;
+    font-weight: 600;
+
+    color: #1e293b;
 
     margin: 12px 0;
-
-    background:
-        linear-gradient(
-            90deg,
-            #ffffff,
-            #22d3ee,
-            #a78bfa
-        );
-
-    -webkit-background-clip: text;
-
-    -webkit-text-fill-color: transparent;
 }
 
 .header p {
-
-    color: #94a3b8;
-
-    font-size: 17px;
-}
-
-
-/* CARDS */
-
-.card {
-
-    padding: 35px;
-
-    margin-bottom: 22px;
-
-    border-radius: 25px;
-
-    background:
-        linear-gradient(
-            145deg,
-            rgba(255,255,255,0.08),
-            rgba(255,255,255,0.025)
-        );
-
-    border:
-        1px solid rgba(255,255,255,0.1);
-
-    transition: 0.3s;
-}
-
-.card:hover {
-
-    transform: translateY(-5px);
-
-    border-color:
-        rgba(34,211,238,0.5);
-
-    box-shadow:
-        0 15px 40px rgba(0,0,0,0.35);
-}
-
-.card h2 {
-
-    color: #22d3ee;
-
-    margin-bottom: 15px;
-
-    font-size: 24px;
-}
-
-.card p {
-
-    color: #cbd5e1;
-
-    line-height: 1.9;
+    color: #64748b;
 
     font-size: 16px;
 }
 
 
-/* FOOTER */
+/* ===== CARDS ===== */
 
-footer {
+.card {
+    padding: 28px;
 
-    text-align: center;
+    margin-bottom: 16px;
 
-    color: #475569;
+    background: #ffffff;
 
-    font-size: 13px;
+    border: 1px solid #e2e8f0;
 
-    margin: 40px 0;
+    border-radius: 10px;
+
+    transition: 0.2s;
+}
+
+.card:hover {
+    transform: translateY(-3px);
+
+    border-color: #93c5fd;
+
+    box-shadow:
+        0 8px 20px rgba(15,23,42,0.06);
+}
+
+.card h2 {
+    color: #1e293b;
+
+    margin-bottom: 12px;
+
+    font-size: 20px;
+
+    font-weight: 600;
+}
+
+.card h2::first-letter {
+    color: #2563eb;
+}
+
+.card p {
+    color: #64748b;
+
+    line-height: 1.8;
+
+    font-size: 15px;
 }
 
 
-/* MOBILE */
+/* ===== FOOTER ===== */
+
+footer {
+    text-align: center;
+
+    color: #94a3b8;
+
+    font-size: 12px;
+
+    margin: 45px 0 25px;
+}
+
+
+/* ===== MOBILE ===== */
 
 @media (max-width: 700px) {
 
-    .header h1 {
+    .container {
+        width: 92%;
 
-        font-size: 38px;
+        padding-top: 45px;
     }
 
-    .container {
+    .header h1 {
+        font-size: 34px;
+    }
 
-        width: 92%;
+    .navbar {
+        padding: 0 5%;
+    }
+
+    .card {
+        padding: 23px;
     }
 
 }
@@ -257,10 +231,13 @@ footer {
 </nav>
 
 
+
 <!-- CONTENT -->
 
 <div class="container">
 
+
+    <!-- HEADER -->
 
     <div class="header">
 
@@ -276,6 +253,9 @@ footer {
 
     </div>
 
+
+
+    <!-- GOAL -->
 
     <div class="card">
 
@@ -294,6 +274,9 @@ footer {
     </div>
 
 
+
+    <!-- UNIVERSITY -->
+
     <div class="card">
 
         <h2>
@@ -310,6 +293,9 @@ footer {
 
     </div>
 
+
+
+    <!-- CAREER -->
 
     <div class="card">
 
@@ -328,6 +314,9 @@ footer {
     </div>
 
 
+
+    <!-- DREAM -->
+
     <div class="card">
 
         <h2>
@@ -345,6 +334,7 @@ footer {
 
 
 </div>
+
 
 
 <footer>
