@@ -1,68 +1,271 @@
 <!DOCTYPE html>
 <html lang="th">
+
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>เกี่ยวกับฉัน</title>
+
+<title>เกี่ยวกับฉัน | วรภัทร หลักคำ</title>
 
 <style>
-body {
+
+* {
     margin: 0;
-    font-family: Arial, Tahoma, sans-serif;
-    color: white;
-    background: #050816;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, "Tahoma", sans-serif;
+
     min-height: 100vh;
+
+    background: #f8fafc;
+
+    color: #1e293b;
 }
 
-nav {
-    padding: 25px 7%;
-    border-bottom: 1px solid #263244;
+
+/* ===== NAVBAR ===== */
+
+.navbar {
+    height: 70px;
+
+    padding: 0 8%;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    background: #ffffff;
+
+    border-bottom: 1px solid #e2e8f0;
 }
 
-nav a {
-    color: #38bdf8;
+.logo {
+    font-size: 21px;
+
+    font-weight: 600;
+
+    color: #1e293b;
+}
+
+.logo span {
+    color: #2563eb;
+}
+
+.back {
+    color: #475569;
+
     text-decoration: none;
+
+    padding: 8px 15px;
+
+    border: 1px solid #cbd5e1;
+
+    border-radius: 7px;
+
+    font-size: 14px;
+
+    transition: 0.2s;
 }
+
+.back:hover {
+    background: #2563eb;
+
+    color: white;
+
+    border-color: #2563eb;
+}
+
+
+/* ===== MAIN ===== */
 
 main {
+    width: 88%;
+
     max-width: 900px;
-    margin: 70px auto;
-    padding: 20px;
+
+    margin: 0 auto;
+
+    padding: 60px 0 30px;
 }
+
+
+/* ===== HEADER ===== */
+
+.header {
+    text-align: center;
+
+    margin-bottom: 40px;
+}
+
+.header small {
+    color: #2563eb;
+
+    letter-spacing: 3px;
+
+    font-size: 12px;
+}
+
+.header h1 {
+    font-size: 42px;
+
+    font-weight: 600;
+
+    color: #1e293b;
+
+    margin: 12px 0;
+}
+
+.header p {
+    color: #64748b;
+
+    font-size: 16px;
+}
+
+
+/* ===== BOX ===== */
 
 .box {
-    padding: 35px;
-    border-radius: 25px;
-    background: rgba(255,255,255,0.06);
-    border: 1px solid rgba(255,255,255,0.1);
+    padding: 30px;
+
+    background: #ffffff;
+
+    border: 1px solid #e2e8f0;
+
+    border-radius: 10px;
+
+    transition: 0.2s;
 }
 
-h1 {
-    color: #38bdf8;
+.box:hover {
+    border-color: #93c5fd;
+
+    box-shadow:
+        0 8px 20px rgba(15,23,42,0.06);
 }
 
-p {
-    color: #cbd5e1;
-    line-height: 1.8;
+
+/* ===== CONTENT ===== */
+
+.box h2 {
+    color: #1e293b;
+
+    font-size: 21px;
+
+    font-weight: 600;
+
+    margin-bottom: 18px;
 }
+
+.box p {
+    color: #64748b;
+
+    font-size: 15px;
+
+    line-height: 1.9;
+
+    margin-bottom: 15px;
+}
+
+.box p:last-child {
+    margin-bottom: 0;
+}
+
+
+/* ===== FOOTER ===== */
+
+footer {
+    text-align: center;
+
+    color: #94a3b8;
+
+    font-size: 12px;
+
+    margin: 45px 0 25px;
+}
+
+
+/* ===== MOBILE ===== */
+
+@media (max-width: 700px) {
+
+    .navbar {
+        padding: 0 5%;
+    }
+
+    main {
+        width: 92%;
+
+        padding-top: 45px;
+    }
+
+    .header h1 {
+        font-size: 34px;
+    }
+
+    .box {
+        padding: 23px;
+    }
+
+}
+
 </style>
+
 </head>
+
 
 <body>
 
-<nav>
-    <a href="portfoilo.html">← กลับ Portfolio</a>
+
+<!-- NAVBAR -->
+
+<nav class="navbar">
+
+    <div class="logo">
+        VORRAPAT<span>.</span>
+    </div>
+
+    <a href="portfoilo.html" class="back">
+        ← กลับ Portfolio
+    </a>
+
 </nav>
+
+
+
+<!-- MAIN -->
 
 <main>
 
-    <div class="box">
 
-        <h1>👤 เกี่ยวกับฉัน</h1>
+    <!-- HEADER -->
+
+    <div class="header">
+
+        <small>ABOUT ME</small>
+
+        <h1>
+            เกี่ยวกับฉัน 👤
+        </h1>
 
         <p>
-            สวัสดีครับ ผมชื่อ วรภัทร หลักคำ
+            ข้อมูลส่วนตัว ความสนใจ และสิ่งที่กำลังเรียนรู้
         </p>
+
+    </div>
+
+
+
+    <!-- CONTENT -->
+
+    <div class="box">
+
+        <h2>
+            สวัสดีครับ ผมชื่อ วรภัทร หลักคำ
+        </h2>
 
         <p>
             ผมเป็นนักเรียนที่สนใจด้านเทคโนโลยี
@@ -77,7 +280,18 @@ p {
 
     </div>
 
+
 </main>
 
+
+
+<footer>
+
+    © 2026 Vorrapat Lakkham • My Portfolio
+
+</footer>
+
+
 </body>
+
 </html>
