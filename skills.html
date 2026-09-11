@@ -2,6 +2,7 @@
 <html lang="th">
 
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -18,182 +19,206 @@
 body {
     font-family: Arial, "Tahoma", sans-serif;
     min-height: 100vh;
-    color: white;
 
-    background:
-        radial-gradient(
-            circle at 15% 20%,
-            rgba(129,140,248,0.25),
-            transparent 30%
-        ),
-        radial-gradient(
-            circle at 85% 80%,
-            rgba(139,92,246,0.25),
-            transparent 30%
-        ),
-        #050816;
+    background: #f8fafc;
+    color: #1e293b;
 }
 
+
+/* ===== NAVBAR ===== */
+
 .navbar {
-    height: 75px;
-    padding: 0 7%;
+    height: 70px;
+    padding: 0 8%;
 
     display: flex;
     justify-content: space-between;
     align-items: center;
 
-    background: rgba(5,8,22,0.75);
-    backdrop-filter: blur(15px);
+    background: #ffffff;
 
-    border-bottom:
-        1px solid rgba(255,255,255,0.08);
+    border-bottom: 1px solid #e2e8f0;
 }
 
 .logo {
-    font-size: 23px;
-    font-weight: bold;
+    font-size: 21px;
+    font-weight: 600;
+    color: #1e293b;
 }
 
 .logo span {
-    color: #818cf8;
+    color: #2563eb;
 }
 
 .back {
-    color: #cbd5e1;
+    color: #475569;
     text-decoration: none;
 
-    padding: 9px 18px;
+    padding: 8px 15px;
 
-    border-radius: 30px;
+    border: 1px solid #cbd5e1;
+    border-radius: 7px;
 
-    border:
-        1px solid rgba(129,140,248,0.4);
+    font-size: 14px;
 
-    transition: 0.3s;
+    transition: 0.2s;
 }
 
 .back:hover {
-    background: #818cf8;
-    color: #050816;
+    background: #2563eb;
+    color: white;
+    border-color: #2563eb;
 }
+
+
+/* ===== CONTAINER ===== */
 
 .container {
-    width: 90%;
-    max-width: 950px;
+    width: 88%;
+    max-width: 900px;
 
-    margin: 70px auto;
+    margin: 0 auto;
+
+    padding: 60px 0 30px;
 }
+
+
+/* ===== HEADER ===== */
 
 .header {
     text-align: center;
-    margin-bottom: 45px;
+
+    margin-bottom: 40px;
 }
 
 .header small {
-    color: #818cf8;
-    letter-spacing: 4px;
-    font-size: 13px;
+    color: #2563eb;
+
+    letter-spacing: 3px;
+
+    font-size: 12px;
 }
 
 .header h1 {
-    font-size: 48px;
+    font-size: 42px;
+
+    font-weight: 600;
+
+    color: #1e293b;
+
     margin: 12px 0;
-
-    background:
-        linear-gradient(
-            90deg,
-            #ffffff,
-            #818cf8,
-            #c084fc
-        );
-
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
 }
 
 .header p {
-    color: #94a3b8;
-    font-size: 17px;
+    color: #64748b;
+
+    font-size: 16px;
 }
+
+
+/* ===== SKILLS ===== */
 
 .skills {
     display: grid;
 
-    grid-template-columns:
-        repeat(2, 1fr);
+    grid-template-columns: repeat(2, 1fr);
 
-    gap: 22px;
+    gap: 16px;
 }
 
+
+/* ===== CARD ===== */
+
 .card {
-    padding: 30px;
+    background: white;
 
-    border-radius: 25px;
+    border: 1px solid #e2e8f0;
 
-    background:
-        linear-gradient(
-            145deg,
-            rgba(255,255,255,0.08),
-            rgba(255,255,255,0.025)
-        );
+    border-radius: 10px;
 
-    border:
-        1px solid rgba(255,255,255,0.1);
+    padding: 28px;
 
-    transition: 0.3s;
+    min-height: 230px;
+
+    transition: 0.2s;
 }
 
 .card:hover {
-    transform: translateY(-7px);
+    transform: translateY(-3px);
 
-    border-color:
-        rgba(129,140,248,0.6);
+    border-color: #93c5fd;
 
     box-shadow:
-        0 15px 40px rgba(0,0,0,0.35);
+        0 8px 20px rgba(15,23,42,0.06);
 }
 
 .icon {
-    font-size: 40px;
+    font-size: 34px;
+
     margin-bottom: 15px;
 }
 
 .card h2 {
+    color: #1e293b;
+
+    font-size: 20px;
+
     margin-bottom: 12px;
-    color: #a5b4fc;
 }
 
 .card p {
-    color: #cbd5e1;
+    color: #64748b;
+
+    font-size: 15px;
+
     line-height: 1.8;
 }
+
+
+/* ===== FOOTER ===== */
 
 footer {
     text-align: center;
 
-    color: #475569;
+    color: #94a3b8;
 
-    font-size: 13px;
+    font-size: 12px;
 
-    margin: 40px 0;
+    margin: 45px 0 25px;
 }
 
+
+/* ===== MOBILE ===== */
+
 @media (max-width: 700px) {
+
+    .container {
+        padding-top: 45px;
+    }
 
     .skills {
         grid-template-columns: 1fr;
     }
 
     .header h1 {
-        font-size: 38px;
+        font-size: 34px;
     }
+
+    .navbar {
+        padding: 0 5%;
+    }
+
 }
 
 </style>
 
 </head>
 
+
 <body>
+
+
+<!-- NAVBAR -->
 
 <nav class="navbar">
 
@@ -208,14 +233,20 @@ footer {
 </nav>
 
 
+
+<!-- CONTENT -->
+
 <div class="container">
+
+
+    <!-- HEADER -->
 
     <div class="header">
 
         <small>MY SKILLS</small>
 
         <h1>
-            ทักษะของฉัน ⚡
+            ทักษะของฉัน
         </h1>
 
         <p>
@@ -225,7 +256,13 @@ footer {
     </div>
 
 
+
+    <!-- SKILLS -->
+
     <div class="skills">
+
+
+        <!-- PROGRAMMING -->
 
         <div class="card">
 
@@ -246,6 +283,9 @@ footer {
         </div>
 
 
+
+        <!-- WEBSITE -->
+
         <div class="card">
 
             <div class="icon">
@@ -258,13 +298,15 @@ footer {
 
             <p>
                 สามารถเรียนรู้และพัฒนาเว็บไซต์ด้วย
-                HTML และ CSS
-                รวมถึงการออกแบบหน้าเว็บไซต์
+                HTML และ CSS รวมถึงการออกแบบหน้าเว็บไซต์
                 ให้ใช้งานง่ายและสวยงาม
             </p>
 
         </div>
 
+
+
+        <!-- DESIGN -->
 
         <div class="card">
 
@@ -278,13 +320,15 @@ footer {
 
             <p>
                 สนใจการออกแบบหน้าตาเว็บไซต์
-                การจัดวางองค์ประกอบ
-                สี ตัวอักษร และรูปแบบต่าง ๆ
-                ให้เหมาะสมกับผู้ใช้งาน
+                การจัดวางองค์ประกอบ สี ตัวอักษร
+                และรูปแบบต่าง ๆ ให้เหมาะสมกับผู้ใช้งาน
             </p>
 
         </div>
 
+
+
+        <!-- PROBLEM SOLVING -->
 
         <div class="card">
 
@@ -298,8 +342,7 @@ footer {
 
             <p>
                 สามารถวิเคราะห์ปัญหา
-                ทดลองหาวิธีแก้ไข
-                และเรียนรู้จากข้อผิดพลาด
+                ทดลองหาวิธีแก้ไข และเรียนรู้จากข้อผิดพลาด
                 เพื่อนำไปพัฒนาผลงานให้ดีขึ้น
             </p>
 
@@ -308,7 +351,9 @@ footer {
 
     </div>
 
+
 </div>
+
 
 
 <footer>
@@ -316,6 +361,7 @@ footer {
     © 2026 Vorrapat Lakkham • My Portfolio
 
 </footer>
+
 
 </body>
 
