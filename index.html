@@ -20,7 +20,6 @@ body {
     font-family: Arial, "Tahoma", sans-serif;
     min-height: 100vh;
 
-    background: #f8fafc;
     color: #1e293b;
 
     display: flex;
@@ -28,65 +27,101 @@ body {
     align-items: center;
 
     padding: 25px;
+
+    /* พื้นหลังขาว + ฟ้า/ม่วงอ่อน */
+    background:
+        radial-gradient(
+            circle at 10% 15%,
+            #dbeafe 0%,
+            transparent 30%
+        ),
+        radial-gradient(
+            circle at 90% 85%,
+            #ede9fe 0%,
+            transparent 30%
+        ),
+        #f8fafc;
 }
 
 
-/* กล่องหลัก */
+/* ===== กล่องหลัก ===== */
 
 .container {
     width: 100%;
     max-width: 650px;
 
-    background: #ffffff;
+    background: rgba(255, 255, 255, 0.95);
 
     padding: 50px 40px;
 
-    border: 1px solid #e2e8f0;
-    border-radius: 12px;
+    border: 1px solid #dbeafe;
+
+    border-radius: 16px;
 
     text-align: center;
+
+    box-shadow:
+        0 12px 35px rgba(37, 99, 235, 0.08);
 }
 
 
-/* หัวข้อเล็ก */
+/* ===== หัวข้อเล็ก ===== */
 
 .small-title {
-    color: #64748b;
+    color: #2563eb;
 
     font-size: 13px;
 
-    letter-spacing: 2px;
+    font-weight: 600;
+
+    letter-spacing: 3px;
 
     margin-bottom: 12px;
 }
 
 
-/* หัวข้อหลัก */
+/* ===== หัวข้อหลัก ===== */
 
 h1 {
     font-size: 40px;
 
     font-weight: 600;
 
-    color: #1e293b;
-
     margin-bottom: 18px;
+
+    /* ตัวหนังสือไล่สีฟ้า-ม่วง */
+    background:
+        linear-gradient(
+            90deg,
+            #2563eb,
+            #7c3aed
+        );
+
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 
-/* เส้น */
+/* ===== เส้น ===== */
 
 .line {
-    width: 45px;
-    height: 2px;
+    width: 55px;
+    height: 3px;
 
-    background: #3b82f6;
+    background:
+        linear-gradient(
+            90deg,
+            #2563eb,
+            #7c3aed
+        );
 
     margin: 0 auto 25px;
+
+    border-radius: 10px;
 }
 
 
-/* คำอธิบาย */
+/* ===== คำอธิบาย ===== */
 
 .subtitle {
     color: #64748b;
@@ -99,7 +134,7 @@ h1 {
 }
 
 
-/* ชื่อ */
+/* ===== ชื่อ ===== */
 
 .name {
     font-size: 22px;
@@ -120,32 +155,46 @@ h1 {
 }
 
 
-/* ปุ่ม */
+/* ===== ปุ่ม ===== */
 
 .button {
     display: inline-block;
 
-    padding: 11px 24px;
+    padding: 11px 25px;
 
-    background: #2563eb;
+    /* ปุ่มฟ้า-ม่วง */
+    background:
+        linear-gradient(
+            90deg,
+            #2563eb,
+            #7c3aed
+        );
 
     color: white;
 
     text-decoration: none;
 
-    border-radius: 7px;
+    border-radius: 8px;
 
     font-size: 15px;
+
+    font-weight: 500;
+
+    box-shadow:
+        0 6px 15px rgba(37, 99, 235, 0.18);
 
     transition: 0.2s;
 }
 
 .button:hover {
-    background: #1d4ed8;
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 9px 20px rgba(37, 99, 235, 0.25);
 }
 
 
-/* Footer */
+/* ===== Footer ===== */
 
 footer {
     margin-top: 30px;
@@ -156,7 +205,7 @@ footer {
 }
 
 
-/* มือถือ */
+/* ===== มือถือ ===== */
 
 @media (max-width: 600px) {
 
@@ -166,6 +215,8 @@ footer {
 
     .container {
         padding: 40px 25px;
+
+        border-radius: 14px;
     }
 
     h1 {
