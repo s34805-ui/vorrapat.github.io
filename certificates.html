@@ -18,210 +18,213 @@
 
 body {
     font-family: Arial, "Tahoma", sans-serif;
-    min-height: 100vh;
-    color: white;
 
-    background:
-        radial-gradient(
-            circle at 15% 20%,
-            rgba(168,85,247,0.25),
-            transparent 30%
-        ),
-        radial-gradient(
-            circle at 85% 80%,
-            rgba(56,189,248,0.2),
-            transparent 30%
-        ),
-        #050816;
+    min-height: 100vh;
+
+    background: #f8fafc;
+
+    color: #1e293b;
 }
 
 
-/* NAVBAR */
+/* ===== NAVBAR ===== */
 
 .navbar {
-    height: 75px;
-    padding: 0 7%;
+    height: 70px;
+
+    padding: 0 8%;
 
     display: flex;
     justify-content: space-between;
     align-items: center;
 
-    background: rgba(5,8,22,0.75);
-    backdrop-filter: blur(15px);
+    background: #ffffff;
 
-    border-bottom:
-        1px solid rgba(255,255,255,0.08);
+    border-bottom: 1px solid #e2e8f0;
 }
 
 .logo {
-    font-size: 23px;
-    font-weight: bold;
+    font-size: 21px;
+
+    font-weight: 600;
+
+    color: #1e293b;
 }
 
 .logo span {
-    color: #a855f7;
+    color: #2563eb;
 }
 
 .back {
-    color: #cbd5e1;
+    color: #475569;
+
     text-decoration: none;
 
-    padding: 9px 18px;
+    padding: 8px 15px;
 
-    border-radius: 30px;
+    border: 1px solid #cbd5e1;
 
-    border:
-        1px solid rgba(168,85,247,0.4);
+    border-radius: 7px;
 
-    transition: 0.3s;
+    font-size: 14px;
+
+    transition: 0.2s;
 }
 
 .back:hover {
-    background: #a855f7;
+    background: #2563eb;
+
     color: white;
+
+    border-color: #2563eb;
 }
 
 
-/* CONTAINER */
+/* ===== CONTAINER ===== */
 
 .container {
-    width: 90%;
-    max-width: 1000px;
-    margin: 70px auto;
+    width: 88%;
+
+    max-width: 900px;
+
+    margin: 0 auto;
+
+    padding: 60px 0 30px;
 }
 
 
-/* HEADER */
+/* ===== HEADER ===== */
 
 .header {
     text-align: center;
-    margin-bottom: 45px;
+
+    margin-bottom: 40px;
 }
 
 .header small {
-    color: #c084fc;
-    letter-spacing: 4px;
-    font-size: 13px;
+    color: #2563eb;
+
+    letter-spacing: 3px;
+
+    font-size: 12px;
 }
 
 .header h1 {
-    font-size: 48px;
+    font-size: 42px;
+
+    font-weight: 600;
+
+    color: #1e293b;
+
     margin: 12px 0;
-
-    background:
-        linear-gradient(
-            90deg,
-            #ffffff,
-            #c084fc,
-            #38bdf8
-        );
-
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
 }
 
 .header p {
-    color: #94a3b8;
-    font-size: 17px;
+    color: #64748b;
+
+    font-size: 16px;
 }
 
 
-/* CERTIFICATE */
+/* ===== CERTIFICATE ===== */
 
 .certificate {
-
     max-width: 750px;
+
     margin: auto;
 
     padding: 25px;
 
-    border-radius: 25px;
+    background: #ffffff;
 
-    background:
-        linear-gradient(
-            145deg,
-            rgba(255,255,255,0.08),
-            rgba(255,255,255,0.025)
-        );
+    border: 1px solid #e2e8f0;
 
-    border:
-        1px solid rgba(255,255,255,0.1);
+    border-radius: 10px;
 
     text-align: center;
 
-    transition: 0.3s;
+    transition: 0.2s;
 }
 
 .certificate:hover {
+    transform: translateY(-3px);
 
-    transform: translateY(-7px);
-
-    border-color:
-        rgba(168,85,247,0.6);
+    border-color: #93c5fd;
 
     box-shadow:
-        0 15px 40px rgba(0,0,0,0.4);
+        0 8px 20px rgba(15,23,42,0.06);
 }
 
 
-/* IMAGE */
+/* ===== IMAGE ===== */
 
 .certificate img {
-
     width: 100%;
+
     max-width: 650px;
 
-    border-radius: 15px;
-
     display: block;
+
     margin: auto;
 
-    border:
-        1px solid rgba(255,255,255,0.15);
+    border-radius: 7px;
+
+    border: 1px solid #e2e8f0;
 }
 
 
-/* TEXT */
+/* ===== TEXT ===== */
 
 .certificate h2 {
-
     margin-top: 22px;
 
-    color: #c084fc;
+    color: #1e293b;
 
-    font-size: 24px;
+    font-size: 20px;
+
+    font-weight: 600;
 }
 
 .certificate p {
-
     margin-top: 10px;
 
-    color: #cbd5e1;
+    color: #64748b;
 
-    line-height: 1.7;
+    font-size: 15px;
+
+    line-height: 1.8;
 }
 
 
-/* FOOTER */
+/* ===== FOOTER ===== */
 
 footer {
-
     text-align: center;
 
-    color: #475569;
+    color: #94a3b8;
 
-    font-size: 13px;
+    font-size: 12px;
 
-    margin: 40px 0;
+    margin: 45px 0 25px;
 }
 
 
-/* MOBILE */
+/* ===== MOBILE ===== */
 
 @media (max-width: 700px) {
 
+    .navbar {
+        padding: 0 5%;
+    }
+
+    .container {
+        width: 92%;
+
+        padding-top: 45px;
+    }
+
     .header h1 {
-        font-size: 38px;
+        font-size: 34px;
     }
 
     .certificate {
@@ -238,6 +241,8 @@ footer {
 <body>
 
 
+<!-- NAVBAR -->
+
 <nav class="navbar">
 
     <div class="logo">
@@ -252,8 +257,12 @@ footer {
 
 
 
+<!-- CONTENT -->
+
 <div class="container">
 
+
+    <!-- HEADER -->
 
     <div class="header">
 
@@ -271,11 +280,13 @@ footer {
 
 
 
+    <!-- CERTIFICATE -->
+
     <div class="certificate">
 
         <img
             src="images/684967_279_703113_1753086611.png"
-            alt="เกียรติบัตร"
+            alt="เกียรติบัตรของวรภัทร หลักคำ"
         >
 
         <h2>
