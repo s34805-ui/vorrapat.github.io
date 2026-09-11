@@ -18,164 +18,189 @@
 
 body {
     font-family: Arial, "Tahoma", sans-serif;
-    min-height: 100vh;
-    color: white;
 
-    background:
-        radial-gradient(
-            circle at 15% 20%,
-            rgba(168,85,247,0.25),
-            transparent 30%
-        ),
-        radial-gradient(
-            circle at 85% 80%,
-            rgba(56,189,248,0.2),
-            transparent 30%
-        ),
-        #050816;
+    min-height: 100vh;
+
+    background: #f8fafc;
+
+    color: #1e293b;
 }
 
+
+/* ===== NAVBAR ===== */
+
 .navbar {
-    height: 75px;
-    padding: 0 7%;
+    height: 70px;
+
+    padding: 0 8%;
 
     display: flex;
     justify-content: space-between;
     align-items: center;
 
-    background: rgba(5,8,22,0.75);
-    backdrop-filter: blur(15px);
+    background: #ffffff;
 
-    border-bottom:
-        1px solid rgba(255,255,255,0.08);
+    border-bottom: 1px solid #e2e8f0;
 }
 
 .logo {
-    font-size: 23px;
-    font-weight: bold;
+    font-size: 21px;
+
+    font-weight: 600;
+
+    color: #1e293b;
 }
 
 .logo span {
-    color: #a855f7;
+    color: #2563eb;
 }
 
 .back {
-    color: #cbd5e1;
+    color: #475569;
+
     text-decoration: none;
 
-    padding: 9px 18px;
+    padding: 8px 15px;
 
-    border-radius: 30px;
+    border: 1px solid #cbd5e1;
 
-    border:
-        1px solid rgba(168,85,247,0.4);
+    border-radius: 7px;
 
-    transition: 0.3s;
+    font-size: 14px;
+
+    transition: 0.2s;
 }
 
 .back:hover {
-    background: #a855f7;
+    background: #2563eb;
+
     color: white;
+
+    border-color: #2563eb;
 }
+
+
+/* ===== CONTAINER ===== */
 
 .container {
-    width: 90%;
-    max-width: 850px;
+    width: 88%;
 
-    margin: 70px auto;
+    max-width: 900px;
+
+    margin: 0 auto;
+
+    padding: 60px 0 30px;
 }
+
+
+/* ===== HEADER ===== */
 
 .header {
     text-align: center;
-    margin-bottom: 45px;
+
+    margin-bottom: 40px;
 }
 
 .header small {
-    color: #c084fc;
-    letter-spacing: 4px;
-    font-size: 13px;
+    color: #2563eb;
+
+    letter-spacing: 3px;
+
+    font-size: 12px;
 }
 
 .header h1 {
-    font-size: 48px;
+    font-size: 42px;
+
+    font-weight: 600;
+
+    color: #1e293b;
+
     margin: 12px 0;
-
-    background:
-        linear-gradient(
-            90deg,
-            #ffffff,
-            #c084fc,
-            #38bdf8
-        );
-
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
 }
 
 .header p {
-    color: #94a3b8;
-    font-size: 17px;
+    color: #64748b;
+
+    font-size: 16px;
 }
+
+
+/* ===== CONTACT ===== */
 
 .contact-box {
     display: grid;
+
     grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
+
+    gap: 16px;
 }
+
+
+/* ===== CARD ===== */
 
 .card {
     padding: 28px;
 
-    border-radius: 22px;
+    min-height: 190px;
 
-    background:
-        linear-gradient(
-            145deg,
-            rgba(255,255,255,0.08),
-            rgba(255,255,255,0.025)
-        );
+    background: #ffffff;
 
-    border:
-        1px solid rgba(255,255,255,0.1);
+    border: 1px solid #e2e8f0;
 
-    transition: 0.3s;
+    border-radius: 10px;
+
+    transition: 0.2s;
 }
 
 .card:hover {
-    transform: translateY(-6px);
+    transform: translateY(-3px);
 
-    border-color:
-        rgba(168,85,247,0.6);
+    border-color: #93c5fd;
 
     box-shadow:
-        0 15px 40px rgba(0,0,0,0.4);
+        0 8px 20px rgba(15,23,42,0.06);
 }
 
 .icon {
-    font-size: 38px;
+    font-size: 32px;
+
     margin-bottom: 15px;
 }
 
 .card h2 {
-    color: #c084fc;
-    font-size: 21px;
+    color: #1e293b;
+
+    font-size: 20px;
+
+    font-weight: 600;
+
     margin-bottom: 10px;
 }
 
 .card p {
-    color: #cbd5e1;
-    line-height: 1.7;
+    color: #64748b;
+
+    font-size: 15px;
+
+    line-height: 1.8;
 }
+
+
+/* ===== FOOTER ===== */
 
 footer {
     text-align: center;
 
-    color: #475569;
+    color: #94a3b8;
 
-    font-size: 13px;
+    font-size: 12px;
 
-    margin: 50px 0;
+    margin: 45px 0 25px;
 }
+
+
+/* ===== MOBILE ===== */
 
 @media (max-width: 700px) {
 
@@ -184,7 +209,19 @@ footer {
     }
 
     .header h1 {
-        font-size: 38px;
+        font-size: 34px;
+    }
+
+    .navbar {
+        padding: 0 5%;
+    }
+
+    .container {
+        padding-top: 45px;
+    }
+
+    .card {
+        padding: 23px;
     }
 
 }
@@ -196,6 +233,8 @@ footer {
 
 <body>
 
+
+<!-- NAVBAR -->
 
 <nav class="navbar">
 
@@ -211,8 +250,12 @@ footer {
 
 
 
+<!-- CONTENT -->
+
 <div class="container">
 
+
+    <!-- HEADER -->
 
     <div class="header">
 
@@ -230,8 +273,12 @@ footer {
 
 
 
+    <!-- CONTACT CARDS -->
+
     <div class="contact-box">
 
+
+        <!-- NAME -->
 
         <div class="card">
 
@@ -251,6 +298,8 @@ footer {
 
 
 
+        <!-- EMAIL -->
+
         <div class="card">
 
             <div class="icon">
@@ -269,6 +318,8 @@ footer {
 
 
 
+        <!-- PHONE -->
+
         <div class="card">
 
             <div class="icon">
@@ -280,12 +331,14 @@ footer {
             </h2>
 
             <p>
-                0840569355
+                084XXXXXXX
             </p>
 
         </div>
 
 
+
+        <!-- SCHOOL -->
 
         <div class="card">
 
@@ -294,7 +347,7 @@ footer {
             </div>
 
             <h2>
-                ที่อยู่
+                สถานศึกษา
             </h2>
 
             <p>
