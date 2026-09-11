@@ -1,228 +1,236 @@
-```html
 <!DOCTYPE html>
 <html lang="th">
+
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>My Future | วรภัทร หลักคำ</title>
+
+<title>Portfolio | วรภัทร หลักคำ</title>
+
 <style>
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
+
 body {
     font-family: Arial, "Tahoma", sans-serif;
     min-height: 100vh;
-    color: white;
-    background:
-        radial-gradient(circle at 20% 20%, rgba(52, 152, 219, 0.35), transparent 30%),
-        radial-gradient(circle at 80% 80%, rgba(155, 89, 182, 0.3), transparent 30%),
-        linear-gradient(135deg, #07111f, #102a43, #07111f);
+
+    background: #f8fafc;
+    color: #1e293b;
 
     display: flex;
     justify-content: center;
     align-items: center;
 
-    padding: 40px 20px;
-    overflow: hidden;
-}
-body::before {
-    content: "";
-    position: fixed;
-    width: 350px;
-    height: 350px;
-    border: 1px solid rgba(255,255,255,0.12);
-    border-radius: 50%;
-    top: -120px;
-    right: -100px;
-}
-body::after {
-    content: "";
-    position: fixed;
-    width: 250px;
-    height: 250px;
-    border: 1px solid rgba(255,255,255,0.1);
-    border-radius: 50%;
-    bottom: -100px;
-    left: -80px;
-}
-.card {
-    width: 100%;
-    max-width: 850px;
-    padding: 55px 45px;
-    text-align: center;
-    background: rgba(255,255,255,0.08);
-    border: 1px solid rgba(255,255,255,0.18);
-    border-radius: 30px;
-    backdrop-filter: blur(18px);
-    -webkit-backdrop-filter: blur(18px);
-    box-shadow:
-        0 25px 60px rgba(0,0,0,0.35);
-    position: relative;
-    z-index: 2;
-    animation: fadeIn 1s ease;
-}
-.badge {
-    display: inline-block;
-    padding: 8px 18px;
-    border-radius: 50px;
-    background: rgba(52,152,219,0.15);
-    border: 1px solid rgba(52,152,219,0.4);
-    color: #74c9ff;
-    font-size: 14px;
-    letter-spacing: 1px;
-    margin-bottom: 25px;
-}
-h1 {
-    font-size: 55px;
-    margin-bottom: 10px;
-
-    background: linear-gradient(
-        90deg,
-        #ffffff,
-        #74c9ff,
-        #c78cff
-    );
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-}
-.subtitle {
-    font-size: 22px;
-    color: #b9d7ee;
-    margin-bottom: 30px;
-}
-.intro {
-    max-width: 650px;
-    margin: auto;
-    font-size: 18px;
-    line-height: 1.8;
-    color: #dceaf5;
-}
-.future-box {
-    margin: 35px auto 30px;
     padding: 25px;
+}
+
+
+/* กล่องหลัก */
+
+.container {
+    width: 100%;
     max-width: 650px;
-    border-radius: 20px;
-    background: rgba(0,0,0,0.18);
-    border: 1px solid rgba(255,255,255,0.1);
-    transition: 0.3s;
+
+    background: #ffffff;
+
+    padding: 50px 40px;
+
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+
+    text-align: center;
 }
-.future-box:hover {
-    transform: translateY(-5px);
-    background: rgba(255,255,255,0.1);
-    box-shadow:
-        0 10px 30px rgba(52,152,219,0.15);
+
+
+/* หัวข้อเล็ก */
+
+.small-title {
+    color: #64748b;
+
+    font-size: 13px;
+
+    letter-spacing: 2px;
+
+    margin-bottom: 12px;
 }
-.future-box h2 {
-    margin-bottom: 10px;
-    font-size: 25px;
-    color: #74c9ff;
+
+
+/* หัวข้อหลัก */
+
+h1 {
+    font-size: 40px;
+
+    font-weight: 600;
+
+    color: #1e293b;
+
+    margin-bottom: 18px;
 }
-.future-box p {
-    color: #d7e6f2;
-    line-height: 1.7;
+
+
+/* เส้น */
+
+.line {
+    width: 45px;
+    height: 2px;
+
+    background: #3b82f6;
+
+    margin: 0 auto 25px;
 }
+
+
+/* คำอธิบาย */
+
+.subtitle {
+    color: #64748b;
+
+    font-size: 16px;
+
+    line-height: 1.8;
+
+    margin-bottom: 28px;
+}
+
+
+/* ชื่อ */
+
+.name {
+    font-size: 22px;
+
+    font-weight: 600;
+
+    color: #2563eb;
+
+    margin-bottom: 7px;
+}
+
+.school {
+    color: #64748b;
+
+    font-size: 15px;
+
+    margin-bottom: 28px;
+}
+
+
+/* ปุ่ม */
+
 .button {
     display: inline-block;
-    margin-top: 15px;
-    padding: 14px 28px;
-    border-radius: 50px;
-    text-decoration: none;
+
+    padding: 11px 24px;
+
+    background: #2563eb;
+
     color: white;
-    font-size: 17px;
-    font-weight: bold;
-    background: linear-gradient(
-        135deg,
-        #3498db,
-        #8e44ad
-    );
-    box-shadow:
-        0 8px 25px rgba(52,152,219,0.3);
-    transition: 0.3s;
+
+    text-decoration: none;
+
+    border-radius: 7px;
+
+    font-size: 15px;
+
+    transition: 0.2s;
 }
 
 .button:hover {
-    transform: translateY(-4px) scale(1.03);
-
-    box-shadow:
-        0 12px 35px rgba(52,152,219,0.5);
+    background: #1d4ed8;
 }
 
 
-/* =========================
-   Footer
-========================= */
-.footer {
-    margin-top: 35px;
+/* Footer */
 
-    color: #91a9bc;
+footer {
+    margin-top: 30px;
 
-    font-size: 14px;
+    color: #94a3b8;
+
+    font-size: 12px;
 }
 
-@keyframes fadeIn {
 
-    from {
-        opacity: 0;
-        transform: translateY(30px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
+/* มือถือ */
 
 @media (max-width: 600px) {
 
-    .card {
-        padding: 40px 22px;}
+    body {
+        padding: 18px;
+    }
+
+    .container {
+        padding: 40px 25px;
+    }
+
     h1 {
-        font-size: 40px;
+        font-size: 32px;
     }
+
     .subtitle {
-        font-size: 18px;
+        font-size: 15px;
     }
-    .intro {
-        font-size: 16px;
-    }
+
 }
+
 </style>
+
 </head>
+
+
 <body>
-<div class="card">
-    <div class="badge">
-        ✦ MY PORTFOLIO ✦
+
+
+<div class="container">
+
+
+    <div class="small-title">
+        MY PORTFOLIO
     </div>
-    <h1>MY FUTURE</h1>
-    <div class="subtitle">
+
+
+    <h1>
         อนาคตของฉัน
-    </div>
-    <p class="intro">
-        สวัสดีครับ! ผมชื่อ
-        <strong>วรภัทร หลักคำ</strong>
-        <br>
-        เว็บไซต์นี้จัดทำขึ้นเพื่อแนะนำตัวตน
-        ความสนใจ ผลงาน และเป้าหมาย
-        ที่ผมอยากก้าวไปให้ถึงในอนาคต
+    </h1>
+
+
+    <div class="line"></div>
+
+
+    <p class="subtitle">
+        เว็บไซต์นำเสนอข้อมูลส่วนตัว ผลงาน
+        ทักษะ และเป้าหมายในอนาคตของฉัน
     </p>
-    <div class="future-box">
-        <h2>🚀 เป้าหมายในอนาคต</h2>
-        <p>
-            ผมมีความสนใจด้าน
-            <strong>Computer Science & Engineering</strong>
-            และต้องการพัฒนาความรู้ด้านเทคโนโลยี
-            การเขียนโปรแกรม และการสร้างสรรค์ผลงาน
-            เพื่อนำความรู้ไปต่อยอดในอนาคต
-        </p>
+
+
+    <div class="name">
+        วรภัทร หลักคำ
     </div>
+
+
+    <div class="school">
+        Portfolio ของฉัน
+    </div>
+
+
     <a href="portfoilo.html" class="button">
-        ดู Portfolio ของฉัน →
+        เข้าสู่ Portfolio →
     </a>
-    <div class="footer">
-        © 2026 Vorrapat Lakkham • My Future Portfolio
-    </div>
+
+
+    <footer>
+        © 2026 Vorrapat Lakkham
+    </footer>
+
+
 </div>
+
+
 </body>
+
 </html>
-```
