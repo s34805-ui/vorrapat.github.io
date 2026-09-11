@@ -2,12 +2,14 @@
 <html lang="th">
 
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>Portfolio | วรภัทร หลักคำ</title>
 
 <style>
+
 * {
     margin: 0;
     padding: 0;
@@ -17,300 +19,178 @@
 body {
     font-family: Arial, "Tahoma", sans-serif;
     min-height: 100vh;
-    color: white;
 
-    background:
-        radial-gradient(circle at 15% 20%, rgba(56,189,248,0.25), transparent 30%),
-        radial-gradient(circle at 85% 80%, rgba(139,92,246,0.25), transparent 30%),
-        #050816;
+    background: #f8fafc;
+    color: #1e293b;
 
-    padding-bottom: 50px;
+    padding-bottom: 40px;
 }
 
+
+/* NAVBAR */
+
 .navbar {
-    height: 75px;
+    height: 65px;
     padding: 0 7%;
+
     display: flex;
     justify-content: space-between;
     align-items: center;
 
-    background: rgba(5,8,22,0.75);
-    backdrop-filter: blur(15px);
+    background: white;
 
-    border-bottom: 1px solid rgba(255,255,255,0.08);
+    border-bottom: 1px solid #e2e8f0;
 }
 
 .logo {
-    font-size: 23px;
-    font-weight: bold;
+    font-size: 21px;
+    font-weight: 600;
+    color: #1e293b;
 }
 
 .logo span {
-    color: #38bdf8;
+    color: #2563eb;
 }
 
 .home {
-    color: #cbd5e1;
+    color: #475569;
     text-decoration: none;
-    padding: 9px 18px;
-    border-radius: 30px;
-    border: 1px solid rgba(56,189,248,0.35);
-    transition: 0.3s;
+
+    padding: 8px 16px;
+
+    border: 1px solid #cbd5e1;
+    border-radius: 7px;
+
+    font-size: 14px;
+
+    transition: 0.2s;
 }
 
 .home:hover {
-    background: #38bdf8;
-    color: #050816;
+    background: #2563eb;
+    color: white;
+    border-color: #2563eb;
 }
+
+
+/* HEADER */
 
 .header {
     text-align: center;
-    padding: 70px 20px 45px;
+
+    padding: 55px 20px 35px;
 }
 
 .header small {
-    color: #38bdf8;
-    letter-spacing: 4px;
+    color: #64748b;
+
+    letter-spacing: 3px;
+
     font-size: 13px;
 }
 
 .header h1 {
-    font-size: 50px;
-    margin: 12px 0;
+    font-size: 44px;
 
-    background: linear-gradient(
-        90deg,
-        #ffffff,
-        #38bdf8,
-        #a78bfa
-    );
+    font-weight: 600;
 
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    color: #1e293b;
+
+    margin: 10px 0;
 }
 
 .header p {
-    color: #94a3b8;
-    font-size: 17px;
+    color: #64748b;
+
+    font-size: 16px;
 }
+
+
+/* PROFILE */
 
 .profile {
     width: 90%;
-    max-width: 1000px;
+    max-width: 900px;
+
     margin: auto;
-    padding: 30px;
+    padding: 25px;
 
     display: flex;
     align-items: center;
-    gap: 30px;
 
-    border-radius: 25px;
+    gap: 25px;
 
-    background: rgba(255,255,255,0.06);
-    border: 1px solid rgba(255,255,255,0.1);
+    background: white;
+
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
 }
 
 .profile img {
-    width: 110px;
-    height: 110px;
+    width: 95px;
+    height: 95px;
 
     object-fit: cover;
-    border-radius: 50%;
-    padding: 4px;
 
-    background: linear-gradient(
-        135deg,
-        #38bdf8,
-        #8b5cf6
-    );
+    border-radius: 50%;
+
+    border: 3px solid #e2e8f0;
 }
 
 .profile h2 {
-    margin-bottom: 8px;
+    color: #1e293b;
+
+    font-size: 22px;
+
+    margin-bottom: 7px;
 }
 
 .profile p {
-    color: #94a3b8;
+    color: #64748b;
+
     line-height: 1.7;
+
+    font-size: 15px;
 }
+
+
+/* MENU */
 
 .menu {
     width: 90%;
-    max-width: 1000px;
-    margin: 40px auto;
+    max-width: 900px;
+
+    margin: 30px auto;
 
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 22px;
+
+    grid-template-columns:
+        repeat(2, 1fr);
+
+    gap: 16px;
 }
+
+
+/* CARD */
 
 .card {
-    position: relative;
-    min-height: 180px;
-    padding: 30px;
+    display: block;
 
-    border-radius: 25px;
+    padding: 24px;
+
+    min-height: 150px;
 
     text-decoration: none;
-    color: white;
 
-    background: linear-gradient(
-        145deg,
-        rgba(255,255,255,0.08),
-        rgba(255,255,255,0.025)
-    );
+    color: #1e293b;
 
-    border: 1px solid rgba(255,255,255,0.09);
+    background: white;
 
-    transition: 0.35s;
+    border: 1px solid #e2e8f0;
+
+    border-radius: 12px;
+
+    transition: 0.2s;
 }
 
-.card:hover {
-    transform: translateY(-8px);
-    border-color: #38bdf8;
-
-    box-shadow:
-        0 15px 40px rgba(0,0,0,0.4);
-}
-
-.icon {
-    font-size: 40px;
-    margin-bottom: 15px;
-}
-
-.card h2 {
-    font-size: 22px;
-    margin-bottom: 8px;
-}
-
-.card p {
-    color: #94a3b8;
-    font-size: 14px;
-    line-height: 1.7;
-}
-
-.card::after {
-    content: "→";
-
-    position: absolute;
-    right: 25px;
-    bottom: 20px;
-
-    font-size: 25px;
-    color: #38bdf8;
-}
-
-footer {
-    text-align: center;
-    color: #475569;
-    font-size: 13px;
-    margin-top: 30px;
-}
-
-@media (max-width: 700px) {
-
-    .menu {
-        grid-template-columns: 1fr;
-    }
-
-    .profile {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .header h1 {
-        font-size: 38px;
-    }
-}
-</style>
-
-</head>
-
-<body>
-
-<nav class="navbar">
-
-    <div class="logo">
-        VORRAPAT<span>.</span>
-    </div>
-
-    <a href="index.html" class="home">
-        ← หน้าแรก
-    </a>
-
-</nav>
-
-<div class="header">
-
-    <small>MY PORTFOLIO</small>
-
-    <h1>Portfolio</h1>
-
-    <p>เลือกหัวข้อที่ต้องการดู</p>
-
-</div>
-
-<div class="profile">
-
-    <img src="images/IMG_20260612_155640.jpg" alt="รูปโปรไฟล์">
-
-    <div>
-
-        <h2>วรภัทร หลักคำ</h2>
-
-        <p>
-            ระดับชั้น 6/6 เลขที่ 12
-            <br>
-            เลือกหัวข้อด้านล่างเพื่อดูข้อมูลแต่ละส่วน
-        </p>
-
-    </div>
-
-</div>
-
-<div class="menu">
-
-    <a href="about.html" class="card">
-        <div class="icon">👤</div>
-        <h2>เกี่ยวกับฉัน</h2>
-        <p>ข้อมูลส่วนตัว ประวัติการศึกษา และความสนใจ</p>
-    </a>
-
-    <a href="future.html" class="card">
-        <div class="icon">🚀</div>
-        <h2>อนาคตของฉัน</h2>
-        <p>เป้าหมาย คณะที่สนใจ และอาชีพในอนาคต</p>
-    </a>
-
-    <a href="skills.html" class="card">
-        <div class="icon">⚡</div>
-        <h2>ทักษะของฉัน</h2>
-        <p>ความสามารถด้านการเขียนโปรแกรมและเทคโนโลยี</p>
-    </a>
-
-    <a href="projects.html" class="card">
-        <div class="icon">💻</div>
-        <h2>ผลงานของฉัน</h2>
-        <p>โครงงาน ชิ้นงาน และผลงานที่เคยทำ</p>
-    </a>
-
-    <a href="certificates.html" class="card">
-        <div class="icon">🏆</div>
-        <h2>เกียรติบัตร</h2>
-        <p>เกียรติบัตร กิจกรรม และความสำเร็จ</p>
-    </a>
-
-    <a href="contact.html" class="card">
-        <div class="icon">📞</div>
-        <h2>ติดต่อ</h2>
-        <p>ช่องทางการติดต่อและข้อมูลเพิ่มเติม</p>
-    </a>
-
-</div>
-
-<footer>
-    © 2026 Vorrapat Lakkham • My Portfolio
-</footer>
-
-</body>
-</html>
+.card:hover
