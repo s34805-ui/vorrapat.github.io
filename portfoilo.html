@@ -1,4 +1,402 @@
-<!-- MENU BAR -->
+<!DOCTYPE html>
+<html lang="th">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Portfolio | วรภัทร หลักคำ</title>
+
+<style>
+
+/* ===== RESET ===== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* ===== BODY ===== */
+
+body {
+    font-family: Arial, "Tahoma", sans-serif;
+
+    background:
+        radial-gradient(circle at 10% 10%, #dbeafe 0%, transparent 28%),
+        radial-gradient(circle at 90% 85%, #ede9fe 0%, transparent 30%),
+        #f8fafc;
+
+    color: #1e293b;
+
+    min-height: 100vh;
+}
+
+
+/* ===== NAVBAR ===== */
+
+.navbar {
+    width: 100%;
+
+    height: 70px;
+
+    background: rgba(255,255,255,0.96);
+
+    border-bottom: 1px solid #e2e8f0;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    padding: 0 6%;
+
+    position: sticky;
+
+    top: 0;
+
+    z-index: 10;
+}
+
+
+/* LOGO */
+
+.logo {
+    font-size: 22px;
+
+    font-weight: bold;
+
+    letter-spacing: 1px;
+
+    color: #1e293b;
+}
+
+.logo span {
+    color: #2563eb;
+}
+
+
+/* HOME BUTTON */
+
+.home-btn {
+    text-decoration: none;
+
+    color: #475569;
+
+    font-size: 14px;
+
+    padding: 10px 18px;
+
+    border-radius: 8px;
+
+    border: 1px solid #e2e8f0;
+
+    background: white;
+
+    transition: 0.2s;
+}
+
+.home-btn:hover {
+    background: #eff6ff;
+
+    color: #2563eb;
+
+    border-color: #bfdbfe;
+}
+
+
+/* ===== MENU BAR ===== */
+
+.menu {
+    width: 90%;
+
+    max-width: 1100px;
+
+    margin: 25px auto 40px;
+
+    padding: 8px;
+
+    background: white;
+
+    border: 1px solid #e2e8f0;
+
+    border-radius: 12px;
+
+    box-shadow: 0 6px 20px rgba(37,99,235,0.06);
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 5px;
+}
+
+
+/* MENU ITEM */
+
+.menu-item {
+    flex: 1;
+
+    text-align: center;
+
+    text-decoration: none;
+
+    color: #475569;
+
+    font-size: 14px;
+
+    padding: 13px 10px;
+
+    border-radius: 8px;
+
+    transition: 0.2s;
+
+    white-space: nowrap;
+}
+
+
+.menu-item:hover {
+    background: #eff6ff;
+
+    color: #2563eb;
+}
+
+
+/* ===== HEADER ===== */
+
+.header {
+    width: 90%;
+
+    max-width: 900px;
+
+    margin: 0 auto 35px;
+
+    text-align: center;
+
+    background: rgba(255,255,255,0.95);
+
+    border: 1px solid #e2e8f0;
+
+    border-radius: 16px;
+
+    padding: 45px 25px;
+
+    box-shadow: 0 8px 25px rgba(37,99,235,0.06);
+}
+
+
+.label {
+    font-size: 13px;
+
+    color: #2563eb;
+
+    font-weight: bold;
+
+    letter-spacing: 2px;
+
+    margin-bottom: 10px;
+}
+
+
+.header h1 {
+    font-size: 42px;
+
+    margin-bottom: 10px;
+
+    background: linear-gradient(
+        90deg,
+        #2563eb,
+        #7c3aed
+    );
+
+    -webkit-background-clip: text;
+
+    -webkit-text-fill-color: transparent;
+}
+
+
+.header p {
+    color: #64748b;
+
+    font-size: 16px;
+}
+
+
+/* ===== PROFILE ===== */
+
+.profile {
+    width: 90%;
+
+    max-width: 700px;
+
+    margin: 0 auto 50px;
+
+    background: white;
+
+    border: 1px solid #e2e8f0;
+
+    border-radius: 16px;
+
+    padding: 35px;
+
+    text-align: center;
+
+    box-shadow: 0 8px 25px rgba(37,99,235,0.06);
+}
+
+
+.profile img {
+    width: 150px;
+
+    height: 150px;
+
+    object-fit: cover;
+
+    border-radius: 50%;
+
+    border: 4px solid white;
+
+    box-shadow:
+        0 0 0 2px #dbeafe,
+        0 8px 20px rgba(37,99,235,0.12);
+
+    margin-bottom: 20px;
+}
+
+
+.profile h2 {
+    font-size: 25px;
+
+    color: #2563eb;
+
+    margin-bottom: 8px;
+}
+
+
+.profile .class {
+    color: #475569;
+
+    font-size: 15px;
+
+    margin-bottom: 10px;
+}
+
+
+.profile .welcome {
+    color: #64748b;
+
+    font-size: 14px;
+}
+
+
+/* ===== RESPONSIVE ===== */
+
+@media (max-width: 750px) {
+
+    .navbar {
+        padding: 0 20px;
+    }
+
+    .logo {
+        font-size: 19px;
+    }
+
+    .home-btn {
+        font-size: 13px;
+
+        padding: 8px 12px;
+    }
+
+
+    /* ให้แถบเมนูเลื่อนซ้ายขวาได้ */
+
+    .menu {
+        width: 94%;
+
+        justify-content: flex-start;
+
+        overflow-x: auto;
+
+        scrollbar-width: none;
+
+        margin-top: 18px;
+    }
+
+    .menu::-webkit-scrollbar {
+        display: none;
+    }
+
+
+    .menu-item {
+        flex: 0 0 auto;
+
+        padding: 11px 15px;
+
+        font-size: 13px;
+    }
+
+
+    .header {
+        width: 94%;
+
+        padding: 35px 20px;
+    }
+
+
+    .header h1 {
+        font-size: 34px;
+    }
+
+
+    .header p {
+        font-size: 14px;
+    }
+
+
+    .profile {
+        width: 94%;
+
+        padding: 30px 20px;
+    }
+
+
+    .profile img {
+        width: 130px;
+
+        height: 130px;
+    }
+
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<!-- ===== NAVBAR ===== -->
+
+<nav class="navbar">
+
+    <div class="logo">
+        VORRAPAT<span>.</span>
+    </div>
+
+    <a href="index.html" class="home-btn">
+        ← หน้าแรก
+    </a>
+
+</nav>
+
+
+<!-- ===== MENU BAR ===== -->
 
 <section class="menu">
 
@@ -23,3 +421,51 @@
     </a>
 
 </section>
+
+
+<!-- ===== HEADER ===== -->
+
+<header class="header">
+
+    <div class="label">
+        MY PORTFOLIO
+    </div>
+
+    <h1>
+        Portfolio
+    </h1>
+
+    <p>
+        แฟ้มสะสมผลงานของ วรภัทร หลักคำ
+    </p>
+
+</header>
+
+
+<!-- ===== PROFILE ===== -->
+
+<section class="profile">
+
+    <img
+        src="images/IMG_20260612_155640.jpg"
+        alt="รูปโปรไฟล์"
+    >
+
+    <h2>
+        วรภัทร หลักคำ
+    </h2>
+
+    <p class="class">
+        ระดับชั้น 6/6 เลขที่ 12
+    </p>
+
+    <p class="welcome">
+        ยินดีต้อนรับเข้าสู่ Portfolio ของฉัน
+    </p>
+
+</section>
+
+
+</body>
+
+                           </html>
