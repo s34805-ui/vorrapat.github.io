@@ -2,7 +2,6 @@
 <html lang="th">
 
 <head>
-
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -18,341 +17,219 @@
 
 body {
     font-family: Arial, "Tahoma", sans-serif;
-
+    background:
+        radial-gradient(circle at 10% 10%, #dbeafe 0%, transparent 35%),
+        radial-gradient(circle at 90% 90%, #ede9fe 0%, transparent 35%),
+        #ffffff;
+    color: #222;
     min-height: 100vh;
-
-    background: #f8fafc;
-
-    color: #1e293b;
 }
 
-
-/* ===== NAVBAR ===== */
-
-.navbar {
+/* Navbar */
+nav {
     height: 70px;
-
-    padding: 0 8%;
-
+    background: rgba(255,255,255,0.95);
+    border-bottom: 1px solid #e5e7eb;
     display: flex;
-    justify-content: space-between;
     align-items: center;
-
-    background: #ffffff;
-
-    border-bottom: 1px solid #e2e8f0;
+    justify-content: space-between;
+    padding: 0 7%;
+    position: sticky;
+    top: 0;
+    z-index: 10;
 }
 
 .logo {
-    font-size: 21px;
-
-    font-weight: 600;
-
-    color: #1e293b;
+    font-size: 22px;
+    font-weight: bold;
+    letter-spacing: 1px;
 }
 
 .logo span {
-    color: #2563eb;
+    color: #6366f1;
 }
 
 .back {
-    color: #475569;
-
     text-decoration: none;
-
-    padding: 8px 15px;
-
-    border: 1px solid #cbd5e1;
-
-    border-radius: 7px;
-
-    font-size: 14px;
-
-    transition: 0.2s;
+    color: #555;
+    font-size: 15px;
 }
 
 .back:hover {
-    background: #2563eb;
-
-    color: white;
-
-    border-color: #2563eb;
+    color: #6366f1;
 }
 
-
-/* ===== CONTAINER ===== */
-
-.container {
-    width: 88%;
-
-    max-width: 900px;
-
-    margin: 0 auto;
-
-    padding: 60px 0 30px;
-}
-
-
-/* ===== HEADER ===== */
-
-.header {
+/* Header */
+header {
     text-align: center;
-
-    margin-bottom: 40px;
+    padding: 70px 20px 40px;
 }
 
-.header small {
-    color: #2563eb;
-
+.small-title {
+    color: #6366f1;
+    font-size: 14px;
+    font-weight: bold;
     letter-spacing: 3px;
-
-    font-size: 12px;
+    margin-bottom: 10px;
 }
 
-.header h1 {
-    font-size: 42px;
-
-    font-weight: 600;
-
-    color: #1e293b;
-
-    margin: 12px 0;
+h1 {
+    font-size: 38px;
+    margin-bottom: 12px;
 }
 
-.header p {
-    color: #64748b;
-
+.subtitle {
+    color: #666;
     font-size: 16px;
 }
 
-
-/* ===== CERTIFICATES ===== */
-
+/* Certificates */
 .certificates {
+    width: 90%;
+    max-width: 900px;
+    margin: 0 auto 70px;
     display: flex;
-
     flex-direction: column;
-
     gap: 30px;
 }
 
-
-/* ===== CERTIFICATE ===== */
-
-.certificate {
-    width: 100%;
-
-    margin: auto;
-
-    padding: 25px;
-
-    background: #ffffff;
-
-    border: 1px solid #e2e8f0;
-
-    border-radius: 10px;
-
-    text-align: center;
-
-    transition: 0.2s;
+.card {
+    background: rgba(255,255,255,0.95);
+    border: 1px solid #e5e7eb;
+    border-radius: 20px;
+    padding: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.06);
+    transition: 0.3s;
 }
 
-.certificate:hover {
-    transform: translateY(-3px);
-
-    border-color: #93c5fd;
-
-    box-shadow:
-        0 8px 20px rgba(15,23,42,0.06);
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(99,102,241,0.12);
 }
 
-
-/* ===== IMAGE ===== */
-
-.certificate img {
+.card img {
     width: 100%;
-
-    max-width: 750px;
-
+    max-height: 600px;
+    object-fit: contain;
     display: block;
-
-    margin: auto;
-
-    border-radius: 7px;
-
-    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    background: #f8fafc;
 }
 
-
-/* ===== TEXT ===== */
-
-.certificate h2 {
-    margin-top: 22px;
-
-    color: #1e293b;
-
+.card h2 {
+    margin-top: 18px;
     font-size: 20px;
-
-    font-weight: 600;
+    color: #222;
 }
 
-.certificate p {
-    margin-top: 10px;
-
-    color: #64748b;
-
-    font-size: 15px;
-
-    line-height: 1.8;
+.card p {
+    margin-top: 8px;
+    color: #666;
+    line-height: 1.6;
 }
 
+/* Mobile */
+@media (max-width: 600px) {
 
-/* ===== FOOTER ===== */
-
-footer {
-    text-align: center;
-
-    color: #94a3b8;
-
-    font-size: 12px;
-
-    margin: 45px 0 25px;
-}
-
-
-/* ===== MOBILE ===== */
-
-@media (max-width: 700px) {
-
-    .navbar {
+    nav {
         padding: 0 5%;
     }
 
-    .container {
+    h1 {
+        font-size: 30px;
+    }
+
+    header {
+        padding-top: 50px;
+    }
+
+    .certificates {
         width: 92%;
-
-        padding-top: 45px;
     }
 
-    .header h1 {
-        font-size: 34px;
-    }
-
-    .certificate {
-        padding: 15px;
+    .card {
+        padding: 12px;
     }
 
 }
 
 </style>
-
 </head>
-
 
 <body>
 
-
-<!-- NAVBAR -->
-
-<nav class="navbar">
-
-    <div class="logo">
-        VORRAPAT<span>.</span>
-    </div>
+<nav>
+    <div class="logo">VORRAPAT<span>.</span></div>
 
     <a href="portfoilo.html" class="back">
         ← กลับ Portfolio
     </a>
-
 </nav>
 
+<header>
+    <div class="small-title">MY CERTIFICATES</div>
 
+    <h1>เกียรติบัตร 🏆</h1>
 
-<!-- CONTENT -->
+    <p class="subtitle">
+        เกียรติบัตรและความสำเร็จที่ได้รับ
+    </p>
+</header>
 
-<div class="container">
+<section class="certificates">
 
+    <!-- ใบที่ 1 -->
+    <div class="card">
+        <img src="images/684967_279_703113_1753086611.png"
+             alt="เกียรติบัตรใบที่ 1">
 
-    <!-- HEADER -->
-
-    <div class="header">
-
-        <small>MY CERTIFICATES</small>
-
-        <h1>
-            เกียรติบัตร 🏆
-        </h1>
+        <h2>เกียรติบัตรใบที่ 1</h2>
 
         <p>
-            เกียรติบัตรและความสำเร็จที่ได้รับ
+            เกียรติบัตรที่ได้รับจากการเข้าร่วมกิจกรรม
         </p>
-
     </div>
 
 
+    <!-- ใบที่ 2 -->
+    <div class="card">
+        <img src="images/certificate.jpg.png"
+             alt="เกียรติบัตรใบที่ 2">
 
-    <!-- CERTIFICATES -->
+        <h2>เกียรติบัตรใบที่ 2</h2>
 
-    <div class="certificates">
-
-
-        <!-- ===== เกียรติบัตรใบที่ 1 ===== -->
-
-        <div class="certificate">
-
-            <img
-                src="images/Screenshot_20260915_150333_com_google_android_apps_docs_InternalProjectorActivity_edit_453933271413920.jpg"
-                alt="เกียรติบัตรใบที่ 1 ของวรภัทร หลักคำ"
-            >
-
-            <h2>
-                เกียรติบัตรใบที่ 1
-            </h2>
-
-            <p>
-                เกียรติบัตรจากกิจกรรมและการเรียนรู้ต่าง ๆ
-                ที่ได้เข้าร่วมและเก็บไว้เป็นผลงานใน Portfolio
-            </p>
-
-        </div>
-
-
-
-        <!-- ===== เกียรติบัตรใบที่ 2 ===== -->
-
-        <div class="certificate">
-
-            <img
-                src="images/Screenshot_20260915_150309_com_google_android_apps_docs_InternalProjectorActivity_edit_453962305504325.jpg"
-                alt="เกียรติบัตรใบที่ 2 ของวรภัทร หลักคำ"
-            >
-
-            <h2>
-                เกียรติบัตรใบที่ 2
-            </h2>
-
-            <p>
-                เกียรติบัตรจากการเข้าร่วมอบรม
-                และพัฒนาทักษะทางดิจิทัล
-            </p>
-
-        </div>
-
-
+        <p>
+            เกียรติบัตรที่ได้รับจากการเข้าร่วมกิจกรรม
+        </p>
     </div>
 
 
-</div>
+    <!-- ใบที่ 3 -->
+    <div class="card">
+        <img src="images/Screenshot_20260915_150333_com_google_android_apps_docs_InternalProjectorActivity_edit_453933271413920.jpg"
+             alt="เกียรติบัตรใบที่ 3">
+
+        <h2>เกียรติบัตรใบที่ 3</h2>
+
+        <p>
+            เกียรติบัตรที่ได้รับจากการเข้าร่วมกิจกรรม
+        </p>
+    </div>
 
 
+    <!-- ใบที่ 4 -->
+    <div class="card">
+        <img src="images/Screenshot_20260915_150309_com_google_android_apps_docs_InternalProjectorActivity_edit_453962305504325.jpg"
+             alt="เกียรติบัตรใบที่ 4">
 
-<footer>
+        <h2>เกียรติบัตรใบที่ 4</h2>
 
-    © 2026 Vorrapat Lakkham • My Portfolio
+        <p>
+            เกียรติบัตรที่ได้รับจากการเข้าร่วมกิจกรรม
+        </p>
+    </div>
 
-</footer>
-
+</section>
 
 </body>
-
 </html>
