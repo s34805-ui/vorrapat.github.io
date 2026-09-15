@@ -103,7 +103,7 @@ body {
 .header {
     text-align: center;
 
-    padding: 65px 20px 40px;
+    padding: 55px 20px 30px;
 }
 
 .header small {
@@ -133,66 +133,13 @@ body {
 }
 
 
-/* ===== PROFILE ===== */
-
-.profile {
-    width: 88%;
-    max-width: 900px;
-
-    margin: 0 auto 35px;
-
-    padding: 25px;
-
-    display: flex;
-    align-items: center;
-
-    gap: 25px;
-
-    border: 1px solid #dbeafe;
-
-    border-radius: 12px;
-
-    background: rgba(255,255,255,0.96);
-
-    box-shadow:
-        0 7px 20px rgba(37,99,235,0.06);
-}
-
-.profile img {
-    width: 90px;
-    height: 90px;
-
-    object-fit: cover;
-
-    border-radius: 50%;
-
-    border: 3px solid #dbeafe;
-}
-
-.profile h2 {
-    font-size: 21px;
-
-    margin-bottom: 7px;
-
-    color: #222222;
-}
-
-.profile p {
-    color: #777777;
-
-    font-size: 14px;
-
-    line-height: 1.7;
-}
-
-
 /* ===== MENU ===== */
 
 .menu {
     width: 88%;
     max-width: 900px;
 
-    margin: auto;
+    margin: 0 auto 35px;
 
     display: grid;
 
@@ -258,6 +205,59 @@ body {
 }
 
 
+/* ===== PROFILE ===== */
+
+.profile {
+    width: 88%;
+    max-width: 900px;
+
+    margin: 0 auto 35px;
+
+    padding: 25px;
+
+    display: flex;
+    align-items: center;
+
+    gap: 25px;
+
+    border: 1px solid #dbeafe;
+
+    border-radius: 12px;
+
+    background: rgba(255,255,255,0.96);
+
+    box-shadow:
+        0 7px 20px rgba(37,99,235,0.06);
+}
+
+.profile img {
+    width: 90px;
+    height: 90px;
+
+    object-fit: cover;
+
+    border-radius: 50%;
+
+    border: 3px solid #dbeafe;
+}
+
+.profile h2 {
+    font-size: 21px;
+
+    margin-bottom: 7px;
+
+    color: #222222;
+}
+
+.profile p {
+    color: #777777;
+
+    font-size: 14px;
+
+    line-height: 1.7;
+}
+
+
 /* ===== FOOTER ===== */
 
 footer {
@@ -288,21 +288,21 @@ footer {
     }
 
     .header {
-        padding-top: 45px;
+        padding-top: 40px;
     }
 
     .header h1 {
         font-size: 36px;
     }
 
+    .menu {
+        grid-template-columns: 1fr;
+    }
+
     .profile {
         flex-direction: column;
 
         text-align: center;
-    }
-
-    .menu {
-        grid-template-columns: 1fr;
     }
 
 }
@@ -349,33 +349,6 @@ footer {
 
 
 
-<!-- PROFILE -->
-
-<section class="profile">
-
-    <img
-        src="images/IMG_20260612_155640.jpg"
-        alt="รูปโปรไฟล์"
-    >
-
-    <div>
-
-        <h2>
-            วรภัทร หลักคำ
-        </h2>
-
-        <p>
-            ระดับชั้น 6/6 เลขที่ 12
-            <br>
-            ยินดีต้อนรับเข้าสู่ Portfolio ของผม
-        </p>
-
-    </div>
-
-</section>
-
-
-
 <!-- MENU -->
 
 <section class="menu">
@@ -414,7 +387,7 @@ footer {
         </h2>
 
         <p>
-            เป้าหมาย คณะที่สนใจ และอาชีพในอนาคต
+            มหาวิทยาลัย คณะที่สนใจ และอาชีพในอนาคต
         </p>
 
     </a>
@@ -479,6 +452,33 @@ footer {
 
     </a>
 
+
+</section>
+
+
+
+<!-- PROFILE -->
+
+<section class="profile">
+
+    <img
+        src="images/IMG_20260612_155640.jpg"
+        alt="รูปโปรไฟล์"
+    >
+
+    <div>
+
+        <h2>
+            วรภัทร หลักคำ
+        </h2>
+
+        <p>
+            ระดับชั้น 6/6 เลขที่ 12
+            <br>
+            ยินดีต้อนรับเข้าสู่ Portfolio ของผม
+        </p>
+
+    </div>
 
 </section>
 
