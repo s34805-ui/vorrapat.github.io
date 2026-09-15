@@ -2,6 +2,7 @@
 <html lang="th">
 
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -17,23 +18,31 @@
 
 body {
     font-family: Arial, "Tahoma", sans-serif;
+
     background:
         radial-gradient(circle at 10% 10%, #dbeafe 0%, transparent 35%),
         radial-gradient(circle at 90% 90%, #ede9fe 0%, transparent 35%),
         #ffffff;
+
     color: #222;
     min-height: 100vh;
 }
 
-/* Navbar */
+/* ================= NAVBAR ================= */
+
 nav {
     height: 70px;
-    background: rgba(255,255,255,0.95);
+
+    background: rgba(255,255,255,0.96);
+
     border-bottom: 1px solid #e5e7eb;
+
     display: flex;
     align-items: center;
     justify-content: space-between;
+
     padding: 0 7%;
+
     position: sticky;
     top: 0;
     z-index: 10;
@@ -59,10 +68,11 @@ nav {
     color: #6366f1;
 }
 
-/* Header */
+/* ================= HEADER ================= */
+
 header {
     text-align: center;
-    padding: 70px 20px 40px;
+    padding: 60px 20px 40px;
 }
 
 .small-title {
@@ -83,153 +93,290 @@ h1 {
     font-size: 16px;
 }
 
-/* Certificates */
+/* ================= CERTIFICATES ================= */
+
 .certificates {
+
     width: 90%;
-    max-width: 900px;
+    max-width: 1100px;
+
     margin: 0 auto 70px;
-    display: flex;
-    flex-direction: column;
+
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
     gap: 30px;
 }
 
+/* ================= CARD ================= */
+
 .card {
-    background: rgba(255,255,255,0.95);
+
+    background: rgba(255,255,255,0.98);
+
     border: 1px solid #e5e7eb;
+
     border-radius: 20px;
-    padding: 20px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.06);
+
+    padding: 18px;
+
+    box-shadow: 0 8px 25px rgba(0,0,0,0.06);
+
     transition: 0.3s;
+
+    text-align: center;
 }
 
 .card:hover {
+
     transform: translateY(-5px);
+
     box-shadow: 0 15px 35px rgba(99,102,241,0.12);
 }
 
+/* ================= IMAGE ================= */
+
 .card img {
+
     width: 100%;
-    max-height: 600px;
+
+    height: 330px;
+
     object-fit: contain;
+
     display: block;
+
+    margin: 0 auto;
+
     border-radius: 12px;
+
     background: #f8fafc;
 }
 
+/* ================= TEXT ================= */
+
 .card h2 {
+
     margin-top: 18px;
-    font-size: 20px;
+
+    font-size: 19px;
+
     color: #222;
 }
 
 .card p {
+
     margin-top: 8px;
+
     color: #666;
+
     line-height: 1.6;
+
+    font-size: 14px;
 }
 
-/* Mobile */
+/* ================= TABLET ================= */
+
+@media (max-width: 800px) {
+
+    .certificates {
+
+        grid-template-columns: 1fr;
+
+        max-width: 650px;
+    }
+
+    .card img {
+
+        height: 400px;
+    }
+}
+
+/* ================= MOBILE ================= */
+
 @media (max-width: 600px) {
 
     nav {
+
         padding: 0 5%;
     }
 
-    h1 {
-        font-size: 30px;
+    .logo {
+
+        font-size: 20px;
+    }
+
+    .back {
+
+        font-size: 14px;
     }
 
     header {
-        padding-top: 50px;
+
+        padding: 50px 20px 35px;
+    }
+
+    h1 {
+
+        font-size: 30px;
+    }
+
+    .subtitle {
+
+        font-size: 14px;
     }
 
     .certificates {
+
         width: 92%;
+
+        gap: 22px;
     }
 
     .card {
+
         padding: 12px;
+
+        border-radius: 16px;
+    }
+
+    .card img {
+
+        height: auto;
+
+        max-height: 400px;
     }
 
 }
 
 </style>
+
 </head>
 
 <body>
 
+<!-- NAVBAR -->
+
 <nav>
-    <div class="logo">VORRAPAT<span>.</span></div>
+
+    <div class="logo">
+        VORRAPAT<span>.</span>
+    </div>
 
     <a href="portfoilo.html" class="back">
         ← กลับ Portfolio
     </a>
+
 </nav>
 
-<header>
-    <div class="small-title">MY CERTIFICATES</div>
 
-    <h1>เกียรติบัตร 🏆</h1>
+<!-- HEADER -->
+
+<header>
+
+    <div class="small-title">
+        MY CERTIFICATES
+    </div>
+
+    <h1>
+        เกียรติบัตร 🏆
+    </h1>
 
     <p class="subtitle">
         เกียรติบัตรและความสำเร็จที่ได้รับ
     </p>
+
 </header>
+
+
+<!-- CERTIFICATES -->
 
 <section class="certificates">
 
-    <!-- ใบที่ 1 -->
-    <div class="card">
-        <img src="images/684967_279_703113_1753086611.png"
-             alt="เกียรติบัตรใบที่ 1">
 
-        <h2>เกียรติบัตรใบที่ 1</h2>
+    <!-- ใบที่ 1 -->
+
+    <div class="card">
+
+        <img
+            src="images/684967_279_703113_1753086611.png"
+            alt="เกียรติบัตรใบที่ 1"
+        >
+
+        <h2>
+            เกียรติบัตรใบที่ 1
+        </h2>
 
         <p>
             เกียรติบัตรที่ได้รับจากการเข้าร่วมกิจกรรม
         </p>
+
     </div>
 
 
     <!-- ใบที่ 2 -->
-    <div class="card">
-        <img src="images/certificate.jpg.png"
-             alt="เกียรติบัตรใบที่ 2">
 
-        <h2>เกียรติบัตรใบที่ 2</h2>
+    <div class="card">
+
+        <img
+            src="images/certificate.jpg.png"
+            alt="เกียรติบัตรใบที่ 2"
+        >
+
+        <h2>
+            เกียรติบัตรใบที่ 2
+        </h2>
 
         <p>
             เกียรติบัตรที่ได้รับจากการเข้าร่วมกิจกรรม
         </p>
+
     </div>
 
 
     <!-- ใบที่ 3 -->
-    <div class="card">
-        <img src="images/Screenshot_20260915_150333_com_google_android_apps_docs_InternalProjectorActivity_edit_453933271413920.jpg"
-             alt="เกียรติบัตรใบที่ 3">
 
-        <h2>เกียรติบัตรใบที่ 3</h2>
+    <div class="card">
+
+        <img
+            src="images/Screenshot_20260915_150333_com_google_android_apps_docs_InternalProjectorActivity_edit_453933271413920.jpg"
+            alt="เกียรติบัตรใบที่ 3"
+        >
+
+        <h2>
+            เกียรติบัตรใบที่ 3
+        </h2>
 
         <p>
             เกียรติบัตรที่ได้รับจากการเข้าร่วมกิจกรรม
         </p>
+
     </div>
 
 
     <!-- ใบที่ 4 -->
-    <div class="card">
-        <img src="images/Screenshot_20260915_150309_com_google_android_apps_docs_InternalProjectorActivity_edit_453962305504325.jpg"
-             alt="เกียรติบัตรใบที่ 4">
 
-        <h2>เกียรติบัตรใบที่ 4</h2>
+    <div class="card">
+
+        <img
+            src="images/Screenshot_20260915_150309_com_google_android_apps_docs_InternalProjectorActivity_edit_453962305504325.jpg"
+            alt="เกียรติบัตรใบที่ 4"
+        >
+
+        <h2>
+            เกียรติบัตรใบที่ 4
+        </h2>
 
         <p>
             เกียรติบัตรที่ได้รับจากการเข้าร่วมกิจกรรม
         </p>
+
     </div>
+
 
 </section>
 
 </body>
+
 </html>
