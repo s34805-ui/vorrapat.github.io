@@ -2,7 +2,6 @@
 <html lang="th">
 
 <head>
-
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -18,595 +17,326 @@
 
 body {
     font-family: Arial, "Tahoma", sans-serif;
-    min-height: 100vh;
-
     background:
-        radial-gradient(circle at 10% 10%, #dbeafe 0%, transparent 28%),
-        radial-gradient(circle at 90% 90%, #ede9fe 0%, transparent 28%),
+        radial-gradient(circle at 10% 10%, #dbeafe 0%, transparent 35%),
+        radial-gradient(circle at 90% 90%, #ede9fe 0%, transparent 35%),
         #f8fafc;
-
     color: #1e293b;
+    min-height: 100vh;
 }
 
-
-/* ===== NAVBAR ===== */
-
-.navbar {
+/* Navbar */
+nav {
     height: 70px;
-    padding: 0 8%;
-
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-
-    background: rgba(255,255,255,0.96);
-
+    background: rgba(255,255,255,0.95);
     border-bottom: 1px solid #e2e8f0;
-
-    box-shadow: 0 2px 10px rgba(37,99,235,0.04);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 7%;
+    position: sticky;
+    top: 0;
+    z-index: 10;
 }
 
 .logo {
-    font-size: 21px;
-    font-weight: 600;
-    color: #1e293b;
-}
-
-.logo span {
+    font-size: 22px;
+    font-weight: bold;
     color: #2563eb;
 }
 
+.logo span {
+    color: #7c3aed;
+}
+
 .back {
-    color: #475569;
     text-decoration: none;
-
-    padding: 8px 15px;
-
-    border: 1px solid #cbd5e1;
-    border-radius: 7px;
-
-    font-size: 14px;
-
-    transition: 0.2s;
+    color: #475569;
+    font-size: 15px;
 }
 
 .back:hover {
-    background: linear-gradient(90deg,#2563eb,#7c3aed);
-
-    color: white;
-
-    border-color: transparent;
+    color: #2563eb;
 }
 
-
-/* ===== MAIN ===== */
-
-main {
-    width: 88%;
-    max-width: 900px;
-
-    margin: 0 auto;
-
-    padding: 60px 0 30px;
+/* Main */
+.container {
+    width: 90%;
+    max-width: 1000px;
+    margin: 50px auto;
 }
 
-
-/* ===== HEADER ===== */
-
+/* Header */
 .header {
     text-align: center;
-    margin-bottom: 40px;
+    margin-bottom: 35px;
 }
 
 .header small {
     color: #2563eb;
-
-    letter-spacing: 3px;
-
-    font-size: 12px;
-
-    font-weight: 600;
+    font-weight: bold;
+    letter-spacing: 2px;
 }
 
 .header h1 {
     font-size: 42px;
-
-    font-weight: 600;
-
-    color: #1e293b;
-
-    margin: 12px 0;
+    margin: 8px 0;
 }
 
 .header p {
     color: #64748b;
-
-    font-size: 16px;
 }
 
-
-/* ===== CONTENT ===== */
-
-.content {
-    display: grid;
-
-    grid-template-columns: 1fr 1fr;
-
-    gap: 20px;
-}
-
-
-/* ===== BOX ===== */
-
-.box {
-    padding: 28px;
-
-    background: rgba(255,255,255,0.97);
-
+/* Section */
+.section {
+    background: rgba(255,255,255,0.9);
     border: 1px solid #e2e8f0;
-
-    border-radius: 12px;
-
-    transition: 0.2s;
-
-    box-shadow: 0 5px 15px rgba(0,0,0,0.03);
+    border-radius: 20px;
+    padding: 30px;
+    margin-bottom: 25px;
+    box-shadow: 0 8px 25px rgba(15,23,42,0.06);
 }
 
-.box:hover {
-    transform: translateY(-3px);
-
-    border-color: #93c5fd;
-
-    box-shadow: 0 8px 20px rgba(37,99,235,0.09);
+.section h2 {
+    color: #2563eb;
+    margin-bottom: 22px;
+    font-size: 24px;
 }
 
-.box.full {
-    grid-column: 1 / -1;
-}
-
-
-/* ===== TITLE ===== */
-
-.box h2 {
-    color: #1e293b;
-
-    font-size: 20px;
-
-    font-weight: 600;
-
-    margin-bottom: 20px;
-
-    padding-bottom: 12px;
-
-    border-bottom: 1px solid #e2e8f0;
-}
-
-
-/* ===== PERSONAL INFO ===== */
-
+/* Personal info */
 .info {
     display: grid;
-
-    grid-template-columns: 1fr 1fr;
-
-    gap: 14px;
-}
-
-.info-item {
-    padding: 13px 15px;
-
-    background: #f8fafc;
-
-    border-radius: 8px;
-
-    border: 1px solid #eef2f7;
-}
-
-.info-item span {
-    display: block;
-
-    color: #2563eb;
-
-    font-size: 12px;
-
-    margin-bottom: 5px;
-}
-
-.info-item strong {
-    color: #334155;
-
-    font-size: 14px;
-
-    font-weight: 500;
-}
-
-
-/* ===== EDUCATION ===== */
-
-.education {
-    display: flex;
-
-    flex-direction: column;
-
+    grid-template-columns: repeat(2, 1fr);
     gap: 15px;
 }
 
-.edu-item {
-    padding: 17px;
-
+.info-box {
     background: #f8fafc;
-
-    border-left: 4px solid #2563eb;
-
-    border-radius: 7px;
+    border: 1px solid #e2e8f0;
+    padding: 18px;
+    border-radius: 12px;
 }
 
-.edu-item h3 {
-    color: #1e293b;
-
-    font-size: 16px;
-
-    margin-bottom: 6px;
-}
-
-.edu-item p {
+.info-box strong {
+    display: block;
     color: #64748b;
-
     font-size: 14px;
-
-    line-height: 1.7;
+    margin-bottom: 5px;
 }
 
+.info-box span {
+    font-size: 17px;
+}
 
-/* ===== UNIVERSITY ===== */
+/* Education */
+.edu {
+    border-left: 4px solid #2563eb;
+    padding: 15px 20px;
+    margin-bottom: 15px;
+    background: #f8fafc;
+    border-radius: 0 12px 12px 0;
+}
 
+.edu:last-child {
+    margin-bottom: 0;
+}
+
+.edu strong {
+    color: #2563eb;
+}
+
+/* University */
 .university {
     text-align: center;
 }
 
-.university p {
-    color: #64748b;
-
-    font-size: 15px;
-
-    line-height: 1.8;
-
-    margin-bottom: 20px;
-}
-
-
-/* ===== ROTATING IMAGE ===== */
-
-.image-box {
+.university-image {
     width: 250px;
     height: 250px;
-
     margin: 10px auto 25px;
-
     perspective: 900px;
 }
 
-.university-image {
+.university-image img {
     width: 100%;
     height: 100%;
-
-    object-fit: contain;
-
-    padding: 18px;
-
-    background: white;
-
-    border: 2px solid #dbeafe;
-
-    border-radius: 20px;
-
-    box-shadow: 0 12px 30px rgba(37,99,235,0.12);
-
+    object-fit: cover;
+    border-radius: 18px;
+    box-shadow: 0 15px 30px rgba(0,0,0,0.12);
     animation: rotate3D 7s linear infinite;
-
     transform-style: preserve-3d;
 }
 
 @keyframes rotate3D {
-
     0% {
         transform: rotateY(0deg);
+    }
+
+    50% {
+        transform: rotateY(180deg);
     }
 
     100% {
         transform: rotateY(360deg);
     }
-
 }
 
-
-/* ===== UNIVERSITY INFO ===== */
-
-.university-info {
-    padding: 18px;
-
-    background: #f8fafc;
-
-    border-left: 4px solid #2563eb;
-
-    border-radius: 7px;
-
-    text-align: left;
+.university h3 {
+    font-size: 25px;
+    color: #2563eb;
+    margin-bottom: 8px;
 }
 
-.university-info strong {
-    display: block;
-
-    color: #1e293b;
-
-    font-size: 16px;
-
-    margin-bottom: 6px;
+.university .campus {
+    color: #7c3aed;
+    font-size: 20px;
+    font-weight: bold;
 }
 
-.university-info span {
-    color: #64748b;
-
-    font-size: 14px;
-
-    line-height: 1.7;
-}
-
-
-/* ===== FOOTER ===== */
-
-footer {
-    text-align: center;
-
-    color: #94a3b8;
-
-    font-size: 12px;
-
-    margin: 45px 0 25px;
-}
-
-
-/* ===== MOBILE ===== */
-
+/* Responsive */
 @media (max-width: 700px) {
-
-    .navbar {
-        padding: 0 5%;
-    }
-
-    main {
-        width: 92%;
-
-        padding-top: 45px;
-    }
-
-    .header h1 {
-        font-size: 34px;
-    }
-
-    .content {
-        grid-template-columns: 1fr;
-    }
-
-    .box.full {
-        grid-column: auto;
-    }
 
     .info {
         grid-template-columns: 1fr;
     }
 
-    .box {
-        padding: 23px;
+    .header h1 {
+        font-size: 32px;
     }
 
-    .image-box {
+    .section {
+        padding: 22px;
+    }
+
+    .university-image {
         width: 210px;
         height: 210px;
     }
-
 }
 
 </style>
-
 </head>
-
 
 <body>
 
-
-<!-- ===== NAVBAR ===== -->
-
-<nav class="navbar">
-
-    <div class="logo">
-        VORRAPAT<span>.</span>
-    </div>
+<nav>
+    <div class="logo">VORRAPAT<span>.</span></div>
 
     <a href="portfoilo.html" class="back">
         ← กลับ Portfolio
     </a>
-
 </nav>
 
+<div class="container">
 
-<!-- ===== MAIN ===== -->
-
-<main>
-
-
-    <!-- HEADER -->
-
+    <!-- Header -->
     <div class="header">
-
         <small>ABOUT ME</small>
 
-        <h1>
-            เกี่ยวกับฉัน 👤
-        </h1>
+        <h1>เกี่ยวกับฉัน 👤</h1>
 
         <p>
             ข้อมูลส่วนตัว ประวัติการศึกษา และมหาวิทยาลัยที่สนใจ
         </p>
+    </div>
+
+
+    <!-- ข้อมูลส่วนตัว -->
+    <div class="section">
+
+        <h2>👤 ข้อมูลส่วนตัว</h2>
+
+        <div class="info">
+
+            <div class="info-box">
+                <strong>ชื่อ - นามสกุล</strong>
+                <span>วรภัทร หลักคำ</span>
+            </div>
+
+            <div class="info-box">
+                <strong>ชื่อเล่น</strong>
+                <span>เดียร์</span>
+            </div>
+
+            <div class="info-box">
+                <strong>วันเกิด</strong>
+                <span>18/10/2551</span>
+            </div>
+
+            <div class="info-box">
+                <strong>เชื้อชาติ</strong>
+                <span>ไทย</span>
+            </div>
+
+            <div class="info-box">
+                <strong>ศาสนา</strong>
+                <span>พุทธ</span>
+            </div>
+
+            <div class="info-box">
+                <strong>ระดับชั้น</strong>
+                <span>มัธยมศึกษาปีที่ 6/6</span>
+            </div>
+
+        </div>
 
     </div>
 
 
-    <div class="content">
+    <!-- ประวัติการศึกษา -->
+    <div class="section">
 
+        <h2>🎓 ประวัติการศึกษา</h2>
 
-        <!-- ===== PERSONAL INFO ===== -->
+        <div class="edu">
 
-        <div class="box full">
-
-            <h2>
-                👤 ข้อมูลส่วนตัว
-            </h2>
-
-            <div class="info">
-
-                <div class="info-item">
-                    <span>ชื่อ - นามสกุล</span>
-                    <strong>วรภัทร หลักคำ</strong>
-                </div>
-
-                <div class="info-item">
-                    <span>ชื่อเล่น</span>
-                    <strong>เดียร์</strong>
-                </div>
-
-                <div class="info-item">
-                    <span>วันเกิด</span>
-                    <strong>18/10/2551</strong>
-                </div>
-
-                <div class="info-item">
-                    <span>เชื้อชาติ</span>
-                    <strong>ไทย</strong>
-                </div>
-
-                <div class="info-item">
-                    <span>ศาสนา</span>
-                    <strong>พุทธ</strong>
-                </div>
-
-                <div class="info-item">
-                    <span>ระดับชั้น</span>
-                    <strong>มัธยมศึกษาปีที่ 6/6</strong>
-                </div>
-
-            </div>
-
-        </div>
-
-
-        <!-- ===== EDUCATION ===== -->
-
-        <div class="box full">
-
-            <h2>
-                🎓 ประวัติการศึกษา
-            </h2>
-
-            <div class="education">
-
-                <div class="edu-item">
-
-                    <h3>
-                        ระดับมัธยมศึกษาตอนต้น
-                    </h3>
-
-                    <p>
-                        มัธยมศึกษาปีที่ 1 - 3
-                        <br>
-                        โรงเรียนบ้านบึง "อุตสาหกรรมนุเคราะห์"
-                    </p>
-
-                </div>
-
-
-                <div class="edu-item">
-
-                    <h3>
-                        ระดับมัธยมศึกษาตอนปลาย
-                    </h3>
-
-                    <p>
-                        มัธยมศึกษาปีที่ 4 - 6
-                        <br>
-                        โรงเรียนบ้านบึง "อุตสาหกรรมนุเคราะห์"
-                    </p>
-
-                </div>
-
-            </div>
-
-        </div>
-
-
-        <!-- ===== UNIVERSITY ===== -->
-
-        <div class="box full university">
-
-            <h2>
-                🎓 มหาวิทยาลัยที่สนใจ
-            </h2>
-
-
-            <!-- รูป มจพ. -->
-
-            <div class="image-box">
-
-                <img
-                    src="images/kmutnb.jpg"
-                    alt="มหาวิทยาลัยเทคโนโลยีพระจอมเกล้าพระนครเหนือ"
-                    class="university-image"
-                >
-
-            </div>
-
+            <strong>ระดับมัธยมศึกษาตอนต้น</strong>
 
             <p>
-
-                ผมสนใจศึกษาต่อที่
-                <strong>
-                    มหาวิทยาลัยเทคโนโลยีพระจอมเกล้าพระนครเหนือ (มจพ.)
-                </strong>
-                วิทยาเขตระยอง
-                เพราะเป็นมหาวิทยาลัยที่มีการเรียนการสอน
-                ด้านวิทยาศาสตร์ เทคโนโลยี และนวัตกรรม
-                ซึ่งตรงกับความสนใจของผม
-
+                ม.1 – ม.3 โรงเรียนบ้านบึง "อุตสาหกรรมนุเคราะห์"
             </p>
-
-
-            <div class="university-info">
-
-                <strong>
-                    🏫 มหาวิทยาลัยเทคโนโลยีพระจอมเกล้าพระนครเหนือ (มจพ.)
-                </strong>
-
-                <span>
-                    วิทยาเขตระยอง
-                </span>
-
-            </div>
 
         </div>
 
 
+        <div class="edu">
+
+            <strong>ระดับมัธยมศึกษาตอนปลาย</strong>
+
+            <p>
+                ม.4 – ม.6 โรงเรียนบ้านบึง "อุตสาหกรรมนุเคราะห์"
+            </p>
+
+        </div>
+
     </div>
 
-</main>
 
+    <!-- มหาวิทยาลัย อยู่ล่างสุด -->
+    <div class="section university">
 
-<footer>
+        <h2>🎓 มหาวิทยาลัยที่สนใจ</h2>
 
-    © 2026 Vorrapat Lakkham • My Portfolio
+        <div class="university-image">
 
-</footer>
+            <img
+                src="images/kmutnb.jpg"
+                alt="มหาวิทยาลัยเทคโนโลยีพระจอมเกล้าพระนครเหนือ"
+            >
 
+        </div>
+
+        <h3>
+            มหาวิทยาลัยเทคโนโลยีพระจอมเกล้าพระนครเหนือ (มจพ.)
+        </h3>
+
+        <div class="campus">
+            วิทยาเขตระยอง
+        </div>
+
+    </div>
+
+</div>
 
 </body>
-
-        </html>
+</html>
