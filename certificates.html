@@ -154,6 +154,13 @@ h1 {
     background: #f8fafc;
 }
 
+/* ภาพ 2 ใบที่อยู่ในการ์ดเดียวกัน */
+
+.card .double-image {
+    height: 250px;
+    margin-bottom: 12px;
+}
+
 /* ================= TEXT ================= */
 
 .card h2 {
@@ -191,6 +198,10 @@ h1 {
 
         height: 400px;
     }
+
+    .card .double-image {
+        height: 300px;
+    }
 }
 
 /* ================= MOBILE ================= */
@@ -198,32 +209,26 @@ h1 {
 @media (max-width: 600px) {
 
     nav {
-
         padding: 0 5%;
     }
 
     .logo {
-
         font-size: 20px;
     }
 
     .back {
-
         font-size: 14px;
     }
 
     header {
-
         padding: 50px 20px 35px;
     }
 
     h1 {
-
         font-size: 30px;
     }
 
     .subtitle {
-
         font-size: 14px;
     }
 
@@ -246,6 +251,11 @@ h1 {
         height: auto;
 
         max-height: 400px;
+    }
+
+    .card .double-image {
+        height: auto;
+        max-height: 350px;
     }
 
 }
@@ -295,12 +305,19 @@ h1 {
 <section class="certificates">
 
 
-    <!-- ใบที่ 1 -->
+    <!-- ใบที่ 1 : กิจกรรม + เกียรติบัตร อยู่ด้วยกัน -->
 
     <div class="card">
 
         <img
-            src="images/684967_279_703113_1753086611.png"
+            class="double-image"
+            src="images/1789706364502.jpg"
+            alt="ภาพเข้าร่วมกิจกรรม"
+        >
+
+        <img
+            class="double-image"
+            src="images/Screenshot_20260918_114002_com_google_android_apps_docs_InternalProjectorActivity_edit_556924394688694.jpg"
             alt="เกียรติบัตรใบที่ 1"
         >
 
@@ -309,7 +326,7 @@ h1 {
         </h2>
 
         <p>
-            เกียรติบัตรที่ได้รับจากการเข้าร่วมกิจกรรม
+            ภาพเข้าร่วมกิจกรรมและเกียรติบัตรที่ได้รับ
         </p>
 
     </div>
@@ -320,7 +337,7 @@ h1 {
     <div class="card">
 
         <img
-            src="images/certificate.jpg.png"
+            src="images/684967_279_703113_1753086611.png"
             alt="เกียรติบัตรใบที่ 2"
         >
 
@@ -340,7 +357,7 @@ h1 {
     <div class="card">
 
         <img
-            src="images/Screenshot_20260915_150333_com_google_android_apps_docs_InternalProjectorActivity_edit_453933271413920.jpg"
+            src="images/certificate.jpg.png"
             alt="เกียรติบัตรใบที่ 3"
         >
 
@@ -360,12 +377,32 @@ h1 {
     <div class="card">
 
         <img
-            src="images/Screenshot_20260915_150309_com_google_android_apps_docs_InternalProjectorActivity_edit_453962305504325.jpg"
+            src="images/Screenshot_20260915_150333_com_google_android_apps_docs_InternalProjectorActivity_edit_453933271413920.jpg"
             alt="เกียรติบัตรใบที่ 4"
         >
 
         <h2>
             เกียรติบัตรใบที่ 4
+        </h2>
+
+        <p>
+            เกียรติบัตรที่ได้รับจากการเข้าร่วมกิจกรรม
+        </p>
+
+    </div>
+
+
+    <!-- ใบที่ 5 -->
+
+    <div class="card">
+
+        <img
+            src="images/Screenshot_20260915_150309_com_google_android_apps_docs_InternalProjectorActivity_edit_453962305504325.jpg"
+            alt="เกียรติบัตรใบที่ 5"
+        >
+
+        <h2>
+            เกียรติบัตรใบที่ 5
         </h2>
 
         <p>
